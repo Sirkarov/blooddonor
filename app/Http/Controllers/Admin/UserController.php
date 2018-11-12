@@ -1,0 +1,125 @@
+<?php
+
+namespace App\Http\Controllers\Admin ;
+
+use App\Models\BloodType;
+use App\Models\GenderType;
+use App\Models\City;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\User;
+use DB;
+use Symfony\Component\Debug\Tests\Fixtures\FinalClass;
+
+
+
+class UserController extends Controller
+{
+
+    public function list()
+    {
+        $users = User::all();
+        return view('admin.users.list', compact("users"));
+    }
+    public function create()
+    {
+        $users = User::all();
+        $genderTypes = GenderType::all();
+        $roleTypes = Role::all();
+        $cities = City::all();
+        $bloodTypes = BloodType::all();
+        return view('admin.users.create',compact('users','genderTypes','cities','roleTypes','bloodTypes'));
+    }
+    public  function store(Request $request)
+    {
+        //Create a new post using the request data , Save it to the database , And redirect somewhere in the application
+        $user = new User;
+        $user->name = $request->get('name');
+        $user->surname = $request->get('surname');
+        $user->gender_type_id = $request->get('gender');
+        $user->city_id = $request->get('city');
+        $user->blood_type_id = $request->get('bloodType');
+        $user->email = $request->get('email');
+        $user->years = $request->get('years');
+        $user->phone = $request->get('phone');
+        $user->image = "default";
+        $user->password = "default";
+        $user->donations = $request->get('donations');
+        $user->birth = $request->get('birth');
+
+        #Save it to the database
+        $user->save();
+
+        #And redirect somewhere in the application
+        return redirect('admin/users')->with(['success'=>'succesfully added']);
+    }
+
+    public function testStore()
+    {
+        //Create a new test user with default values , Save it to the database , And redirect somewhere in the application
+        $user = new User;
+        $user->name = "Test User Name";
+        $user->surname = "test User Surname";
+        $user->gender_type_id = rand(1,2);
+        $user->blood_type_id = rand(1,8);
+        $user->email = "Test@Useremail.com";
+
+        $years = rand(18,30);
+        $user->years = $years;
+        $city =  rand(1,30);
+        $user->city_id = $city;
+        $user->donations = rand(1,30);
+
+        $phone = rand(111111,999999);
+        $user->phone = "075".$phone;
+        $user->image = "default";
+        $user->password = "default";
+        $user->birth = Carbon::now();
+
+        #Save it to the database
+        $user->save();
+
+        #And redirect somewhere in the application
+        return redirect('admin/users')->with(['success'=>'succesfully added']);
+    }
+
+    public function edit($id)
+    {
+        $user = User::findorFail($id);
+        $genderTypes = GenderType::all();
+        $roleTypes = Role::all();
+        $cities = City::all();
+        return view('admin.users.edit', compact('user','genderTypes','cities','roleTypes'));
+    }
+
+    public function update(Request $request,$id)
+    {
+        $user = User::findorFail($id);
+        $user->name = $request->get('name');
+        $user->surname = $request->get('surname');
+        $user->gender_type_id = $request->get('gender');
+        $user->email = $request->get('email');
+        $user->years = $request->get('years');
+        $user->city_id = $request->get('city');
+        $user->phone = $request->get('phone');
+        $user->description = $request->get('description');
+        $user->facebook = $request->get('facebook');
+        $user->twitter = $request->get('twitter');
+        $user->image = "default";
+        $user->password = "default";
+
+        $user->save();
+
+        return redirect('admin/users')->with(['success'=>'succesfully added']);
+    }
+
+    public function delete(Request $request)
+    {
+        $user=User::find($request->get("id"));
+        $user->delete();
+
+        return response()->json(['status' => 'success']);
+    }
+
+}
