@@ -11,7 +11,7 @@ class BloodActionController extends Controller
     public function index()
     {
         $characteristics = BloodAction::all();
-        return view('admin/characteristics/list',compact('characteristics'));
+        return view('admin/bloodactions/list',compact('characteristics'));
     }
     public function create()
     {

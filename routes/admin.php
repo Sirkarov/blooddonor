@@ -36,12 +36,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
 
     #Characteristics routes
     Route::group(['prefix' => 'bloodactions', 'as' => 'bloodactions.'],function(){
-        Route::get('/', 'Admin\BloodAction@index')->name('list');
-        Route::get('create', 'Admin\BloodAction@create')->name('create');
-        Route::post('store','Admin\BloodAction@store')->name('store');
-        Route::post('update/{id}','Admin\BloodAction@update')->name('update');
-        Route::delete('destroy/{id}','Admin\BloodAction@destroy')->name('destroy');
-        Route::get('edit/{id}','Admin\BloodAction@edit')->name('edit');
+        Route::get('/', 'Admin\BloodActionController@index')->name('list');
+        Route::get('create', 'Admin\BloodActionController@create')->name('create');
+        Route::post('store','Admin\BloodActionController@store')->name('store');
+        Route::post('update/{id}','Admin\BloodActionController@update')->name('update');
+        Route::delete('destroy/{id}','Admin\BloodActionController@destroy')->name('destroy');
+        Route::get('edit/{id}','Admin\BloodActionController@edit')->name('edit');
     });
 
 });

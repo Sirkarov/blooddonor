@@ -45,8 +45,8 @@
             </span>
                 </a>
                 <ul class="treeview-menu" style="">
-                    <li><a href={{asset('admin/characteristics')}}><i class="fa fa-user"></i> <span>Листа на Крв. Акциии</span></a></li>
-                    <li><a href={{asset('admin/characteristics/create')}}><i class="fa fa-user"></i> <span>Креирај Крв. Акција</span></a></li>
+                    <li><a href={{asset('admin/bloodactions')}}><i class="fa fa-user"></i> <span>Листа на Крв. Акциии</span></a></li>
+                    <li><a href={{asset('admin/bloodactions/create')}}><i class="fa fa-user"></i> <span>Креирај Крв. Акција</span></a></li>
                 </ul>
             </li>
             <li class="active">

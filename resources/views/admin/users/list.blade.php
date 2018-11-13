@@ -44,6 +44,7 @@
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->genderType->type }}</td>
                                     <td>{{ $user->years }}</td>
+                                    <td>{{ $user->birth }}</td>
                                     <td>{{ $user->city->name}}</td>
                                     <td>{{ $user->phone }}</td>
                                     <td>{{ $user->donations }}</td>
