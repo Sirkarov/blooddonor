@@ -12,7 +12,7 @@
                             <h5 class="card-title"> {{$donor -> name}} {{$donor -> surname}}</h5>
                             <h6 class="card-subtitle">Крвна Група <strong>{{$donor->bloodType->type}}</strong></h6>
                         </div>
-                            <a href="/profile"><button type="button"  class="btn btn-primary btn-sm" style="margin-bottom:15px"> Профил</button></a>
+                            <a  href="{{route('blood_donors.profile', $donor->id )}}"><button type="button"  class="btn btn-primary btn-sm" style="margin-bottom:15px"> Профил</button></a>
                     </div>
                 </div>
         </div>
