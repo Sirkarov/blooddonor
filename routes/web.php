@@ -17,6 +17,15 @@ Route::get('/blood_centers', 'Front\BdCenterController@centers');
 
 Route::get('/about', 'Front\AboutController@about');
 
-Route::get('/home', 'Front\IndexController@index');
+Route::get('/', 'Front\IndexController@index');
 
 Route::get('/admin', 'Admin\AdminController@index');
+
+Route::get('/profile', 'Front\BloodDonorController@profile');
+
+
+Route::group(['prefix' => 'blood_donors', 'as' => 'blood_donors.'], function() {
+
+    Route::get('profile/{id}', 'Front\BloodDonorController@profile')->name('profile');
+
+});

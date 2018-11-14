@@ -5,11 +5,13 @@
     @include("includes.head")
 </head>
 <body>
+<div class="main-wrap">
     @include("includes.header")
-   {{-- <div class="main-container">
+    <div class="main-container">
         @yield("content")
-    </div>--}}
+    </div>
     @include("includes/footer")
-@include("includes.scripts")
+</div>
+@include("includes/scripts")
 </body>
 </html>

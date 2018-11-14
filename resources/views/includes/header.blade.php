@@ -24,7 +24,7 @@
                 <a class="nav-link" href="/"><i class="fa fa-home"></i> ДOMA</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="/blood_donors"><i class="fa fa-users"></i> КРВОДАРИТЕЛИ</a></li>
-            <li class="nav-item"><a class="nav-link" href="/blood_centers"><i class="fa fa-map-marker"></i> ЦЕНТРИ</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blood_centers"><i class="fa fa-map-marker"></i> КРВОДАРИТЕЛСКИ АКЦИИ</a></li>
             <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-sign-in"></i> НАЈАВA</a></li>
         </ul>
     </div>
