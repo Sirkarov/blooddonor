@@ -26,7 +26,6 @@
 
                             <td>
                                 <a class="btn btn-block btn-warning btn-sm" href="{{route('admin.cities.edit', $city->id )}}">Edit</a>
-                                {{ csrf_field() }}
                             </td>
                             <td>
                                 <form role="form" method="POST" action="{{route('admin.cities.destroy', $city->id)}}">

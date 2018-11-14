@@ -18,9 +18,10 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <form action="{{route('admin.characteristics.update',$characteristic->id)}}" method="POST">
+                        <form action="{{route('admin.bloodactions.update',$characteristic->id)}}" method="POST">
+                            {{ csrf_field() }}
                         <td>{{$characteristic->id}}</td>
-                        <td ><input type="text" value="{{$characteristic->characteristic}}" name="characteristic"></td>
+                        <td><input type="text" value="{{$characteristic->characteristic}}" name="characteristic"></td>
                         <td>
                             <a class="btn btn-block btn-info btn-sm fa fa-times" href="{{route('admin.characteristics.list')}}"> Откажи</a>
                         </td>

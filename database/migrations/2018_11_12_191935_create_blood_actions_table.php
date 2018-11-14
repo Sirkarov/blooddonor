@@ -15,8 +15,12 @@ class CreateBloodActionsTable extends Migration
     {
         Schema::create('blood_actions', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('name');
+            $table->text('location');
             $table->unsignedInteger('city_id')->nullable();
-            $table->date('date_of_action');
+            $table->date('date');
+            $table->time('time');
+
             $table->timestamps();
 
 

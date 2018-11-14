@@ -19,7 +19,6 @@ class CreateCitiesTable extends Migration
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

@@ -27,6 +27,7 @@
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 257px;">Email</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;">Пол</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;">Години</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;">Крвна Група</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;">Дата на Раѓање</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;">Град</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;">Телефон</th>
@@ -42,8 +43,9 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->surname }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->genderType->type }}</td>
+                                    <td>{{ $user->genderType->type}}</td>
                                     <td>{{ $user->years }}</td>
+                                    <td>{{ $user->bloodType->type}}</td>
                                     <td>{{ $user->birth }}</td>
                                     <td>{{ $user->city->name}}</td>
                                     <td>{{ $user->phone }}</td>
@@ -64,9 +66,10 @@
                                 <th rowspan="1" colspan="1">Име</th>
                                 <th rowspan="1" colspan="1">Презиме</th>
                                 <th rowspan="1" colspan="1">Email</th>
-                                <th rowspan="1" colspan="1">Тип Корисник</th>
                                 <th rowspan="1" colspan="1">Пол</th>
                                 <th rowspan="1" colspan="1">Години</th>
+                                <th rowspan="1" colspan="1">Крвна Група</th>
+                                <th rowspan="1" colspan="1">Дата на Раѓање</th>
                                 <th rowspan="1" colspan="1">Град</th>
                                 <th rowspan="1" colspan="1">Телефон</th>
                                 <th rowspan="1" colspan="1">Дарувања</th>

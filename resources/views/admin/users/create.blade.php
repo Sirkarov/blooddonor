@@ -21,10 +21,19 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputSurname1">Пол</label>
-                    <select class="form-control" required name="gender_type_id">
+                    <select class="form-control" required name="gender">
                         <option hidden value="">Одбери Пол</option>
                         @foreach($genderTypes as $genderType)
-                            <option value="{{$genderType->id}}">{{$genderType->type}}</option>
+                            <option value="{{$genderType->id}}" name="gender">{{$genderType->type}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputYears1">Крвна Група</label>
+                    <select class="form-control" required name="bloodType">
+                        <option hidden value="">Одбери Крвна Група</option>
+                        @foreach($bloodTypes as $type)
+                            <option value="{{$type->id}}" name="city">{{$type->type}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -46,7 +55,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Град</label>
-                    <select class="form-control" required name="city_id">
+                    <select class="form-control" required name="city">
                         <option hidden value="">Одбери Град</option>
                         @foreach($cities as $city)
                             <option value="{{$city->id}}">{{$city->name}}</option>
@@ -61,7 +70,7 @@
             <!-- /.box-body -->
             <div class="box-footer buttons">
                 <a class="btn btn-block btn-info btn-sm fa fa-times" href="{{route('admin.users.list')}}"  style="display:inline"> Откажи</a>
-                <button type="submit" required class="btn btn-success fa fa-check" style="display:inline"> Додади</button>
+                <button type="submit" class="btn btn-success fa fa-check" style="display:inline"> Додади</button>
             </div>
         </form>
         <!-- form end  -->

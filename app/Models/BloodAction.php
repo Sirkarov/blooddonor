@@ -16,4 +16,8 @@ class BloodAction extends Model
     {
         return $this->belongsToMany(BloodAction::class,"");
     }
+    public function city()
+    {
+        return $this->belongsTo(City::class,"city_id");
+    }
 }

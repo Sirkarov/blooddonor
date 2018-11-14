@@ -9,6 +9,7 @@
         <!-- /.box-header -->
         <!-- form start -->
         <form role="form" method="POST" action="{{route('admin.users.update',$user->id)}}">
+            {{ csrf_field() }}
             <div class="box-body">
                 <div class="form-group">
                     <label for="exampleInputName1">Име</label>
@@ -19,13 +20,8 @@
                     <input type="text" class="form-control" value="{{$user->surname}}" required name="surname">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputSurname1">Улога</label>
-                    <select class="form-control" required name="role">
-                        <option hidden value="{{$user->role_id}}">{{$user->roleType->role}}</option>
-                        @foreach($roleTypes as $roleType)
-                            <option value="{{$roleType->id}}">{{$roleType->role}}</option>
-                        @endforeach
-                    </select>
+                    <label for="exampleInputEmail1">Email Адреса</label>
+                    <input type="email"  class="form-control" value="{{$user->email}}" required name="email">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputSurname1">Пол</label>
@@ -37,12 +33,25 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email Адреса</label>
-                    <input type="email"  class="form-control" value="{{$user->email}}" required name="email">
+                    <label for="exampleInputYears1">Години</label>
+                    <input type="text" required   class="form-control" value="{{$user->years}}" name="years">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputYears1">Години</label>
-                    <input type="text"  class="form-control" value="{{$user->years}}" required name="years">
+                    <label for="exampleInputSurname1">Крвна Група</label>
+                    <select class="form-control" required name="bloodType">
+                        <option hidden value="{{$user->blood_type_id}}">{{$user->bloodType->type}}</option>
+                        @foreach($blood_types as $bloodType)
+                            <option value="{{$bloodType->id}}">{{$bloodType->type}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputDonations1">Дарувања</label>
+                    <input type="text" required class="form-control" value="{{$user->donations}}" name="donations">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputYears1">Датум на Раѓање</label>
+                    <input type="date" required class="form-control" value="{{$user->birth}}" name="birth">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Град</label>
@@ -55,25 +64,13 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputYears1">Телефон</label>
-                    <input type="text"  class="form-control" value="{{$user->phone}}" required name="phone">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputYears1">Опис</label>
-                    <input type="text" class="form-control" value="{{$user->description}}" required name="description">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputYears1">Facebook</label>
-                    <input type="text"  class="form-control" value="{{$user->facebook}}" required name="facebook">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputYears1">Twitter</label>
-                    <input type="text"  class="form-control" value="{{$user->twitter}}" required name="twitter">
+                    <input type="text" required class="form-control" value="{{$user->phone}}" name="phone">
                 </div>
             </div>
             <!-- /.box-body -->
             <div class="box-footer buttons">
                 <a class="btn btn-block btn-info btn-sm fa fa-times" href="{{route('admin.users.list')}}"  style="display:inline"> Откажи</a>
-                <button type="submit" required class="btn btn-success fa fa-check" style="display:inline"> Зачувај</button>
+                <button type="submit" class="btn btn-success fa fa-check" style="display:inline"> Зачувај</button>
             </div>
         </form>
         <!-- form end  -->

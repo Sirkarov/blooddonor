@@ -26,9 +26,9 @@ class UserController extends Controller
     {
         $users = User::all();
         $genderTypes = GenderType::all();
-        $roleTypes = Role::all();
         $cities = City::all();
         $bloodTypes = BloodType::all();
+
         return view('admin.users.create',compact('users','genderTypes','cities','roleTypes','bloodTypes'));
     }
     public  function store(Request $request)
@@ -88,24 +88,25 @@ class UserController extends Controller
     {
         $user = User::findorFail($id);
         $genderTypes = GenderType::all();
-        $roleTypes = Role::all();
         $cities = City::all();
-        return view('admin.users.edit', compact('user','genderTypes','cities','roleTypes'));
+        $blood_types = BloodType::all();
+        return view('admin.users.edit', compact('user','genderTypes','cities','blood_types'));
     }
 
     public function update(Request $request,$id)
     {
         $user = User::findorFail($id);
+
         $user->name = $request->get('name');
         $user->surname = $request->get('surname');
-        $user->gender_type_id = $request->get('gender');
         $user->email = $request->get('email');
+        $user->gender_type_id = $request->get('gender');
         $user->years = $request->get('years');
+        $user->blood_type_id = $request->get('bloodType');
+        $user->birth = $request->get('birth');
         $user->city_id = $request->get('city');
         $user->phone = $request->get('phone');
-        $user->description = $request->get('description');
-        $user->facebook = $request->get('facebook');
-        $user->twitter = $request->get('twitter');
+        $user->donations = $request->get('donations');
         $user->image = "default";
         $user->password = "default";
 

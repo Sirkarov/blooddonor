@@ -12,23 +12,30 @@
             <thead>
             <tr>
                 <th style="width: 10px">ID</th>
-                <th style="width: 30px">Карактеристика</th>
+                <th style="width: 30px">Име</th>
+                <th style="width: 30px">Локација</th>
+                <th style="width: 30px">Град</th>
+                <th style="width: 30px">Датум</th>
+                <th style="width: 30px">Време</th>
                 <th style="width: 10px">Измени</th>
                 <th style="width: 10px">Избриши</th>
             </tr>
             </thead>
             <tbody>
             </tbody>
-            @foreach( $characteristics as $characteristic )
+            @foreach( $blood_actions as $blood_action )
             <tr>
                 <td>{{$loop->iteration}}</td>
-                <td>{{$characteristic->characteristic}}</td>
-
+                <td style="width:180px">{{$blood_action->name}}</td>
+                <td style="width:500px">{{$blood_action->location}}</td>
+                <td>{{$blood_action->city->name}}</td>
+                <td>{{$blood_action->date}}</td>
+                <td>{{$blood_action->time}}</td>
                 <td>
-                   <a class="btn btn-block btn-warning btn-sm" href="{{route('admin.characteristics.edit', $characteristic->id )}}">Edit</a>
+                   <a class="btn btn-block btn-warning btn-sm" href="{{route('admin.bloodactions.edit', $blood_action->id )}}">Edit</a>
                 </td>
                 <td>
-                <form role="form" method="POST" action="{{route('admin.characteristics.destroy', $characteristic->id)}}">
+                <form role="form" method="POST" action="{{route('admin.bloodactions.destroy', $blood_action->id)}}">
                     {{csrf_field()}}
                     <input type="hidden" name="_method" value="DELETE">
                     <button class="btn btn-block btn-danger btn-sm">Delete</button>
