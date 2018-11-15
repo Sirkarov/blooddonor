@@ -2,7 +2,7 @@
 @section('content')
     <div class="box characteristics">
         <div class="box-header with-border">
-            <h3 class="box-title">Измени ја карактеристиката {{$characteristic->characteristic}}</h3>
+            <h3 class="box-title">Измени ја Крводарителската Акција {{$blood_action->name}}</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -18,12 +18,17 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <form action="{{route('admin.bloodactions.update',$characteristic->id)}}" method="POST">
+                        <form action="{{route('admin.bloodactions.update',$blood_action->id)}}" method="POST">
                             {{ csrf_field() }}
-                        <td>{{$characteristic->id}}</td>
-                        <td><input type="text" value="{{$characteristic->characteristic}}" name="characteristic"></td>
+                        <td>{{$blood_action->id}}</td>
+                            <td><input type="text" value="{{$blood_action->name}}" name="name"></td>
+                            <td><input type="text" value="{{$blood_action->location}}" name="location"></td>
+                            <td><input type="text" value="{{$blood_action->city_id}}" name="city"></td>
+                            <td><input type="text" value="{{$blood_action->date}}" name="date"></td>
+                            <td><input type="text" value="{{$blood_action->time}}" name="time"></td>
+
                         <td>
-                            <a class="btn btn-block btn-info btn-sm fa fa-times" href="{{route('admin.characteristics.list')}}"> Откажи</a>
+                            <a class="btn btn-block btn-info btn-sm fa fa-times" href="{{route('admin.bloodactions.list')}}"> Откажи</a>
                         </td>
                         <td>
                             <button type="submit"  class="btn btn-block btn-success btn-sm fa fa-times"> Зачувај</button>

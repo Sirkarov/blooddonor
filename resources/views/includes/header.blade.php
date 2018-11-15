@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a href="#" class="navbar-brand">
+        <a href="/" class="navbar-brand">
            <span class="blink"><img class="logo pull-left" src="images/logo.png"></span>
             <span class="logo-text">
                 <span class="subbrend-text"><strong>krvodaritel.mk</strong></span>
@@ -24,7 +24,7 @@
                 <a class="nav-link" href="/"><i class="fa fa-home"></i> ДOMA</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="/blood_donors"><i class="fa fa-users"></i> КРВОДАРИТЕЛИ</a></li>
-            <li class="nav-item"><a class="nav-link" href="/blood_centers"><i class="fa fa-map-marker"></i> КРВОДАРИТЕЛСКИ АКЦИИ</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blood_actions"><i class="fa fa-map-marker"></i> КРВОДАРИТЕЛСКИ АКЦИИ</a></li>
             <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-sign-in"></i> НАЈАВA</a></li>
         </ul>
     </div>

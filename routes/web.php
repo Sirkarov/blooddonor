@@ -13,7 +13,7 @@
 
 Route::get('/blood_donors', 'Front\BloodDonorController@index');
 
-Route::get('/blood_centers', 'Front\BdCenterController@centers');
+Route::get('/blood_actions', 'Front\BloodActionsController@actions');
 
 Route::get('/about', 'Front\AboutController@about');
 
