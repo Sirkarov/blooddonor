@@ -44,8 +44,9 @@ class BloodActionController extends Controller
     public function edit($id)
     {
         $blood_action = BloodAction::findOrFail($id);
+        $cities = City::all();
 
-        return view('admin.bloodactions.edit', compact('blood_action'));
+        return view('admin.bloodactions.edit', compact('blood_action','cities'));
     }
     public function update(Request $request,$id)
     {

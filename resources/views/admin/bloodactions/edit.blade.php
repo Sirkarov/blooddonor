@@ -1,43 +1,44 @@
 @extends('admin.master')
 @section('content')
-    <div class="box characteristics">
+    <div class="box">
         <div class="box-header with-border">
             <h3 class="box-title">Измени ја Крводарителската Акција {{$blood_action->name}}</h3>
         </div>
         <!-- /.box-header -->
-        <div class="box-body">
-            <div class="col-lg-6">
-                <table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th style="width: 10px">ID</th>
-                        <th style="width: 10px">Карактеристика</th>
-                        <th style="width: 15px">Откажи</th>
-                        <th style="width: 10px">Зачувај</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <form action="{{route('admin.bloodactions.update',$blood_action->id)}}" method="POST">
-                            {{ csrf_field() }}
-                        <td>{{$blood_action->id}}</td>
-                            <td><input type="text" value="{{$blood_action->name}}" name="name"></td>
-                            <td><input type="text" value="{{$blood_action->location}}" name="location"></td>
-                            <td><input type="text" value="{{$blood_action->city_id}}" name="city"></td>
-                            <td><input type="text" value="{{$blood_action->date}}" name="date"></td>
-                            <td><input type="text" value="{{$blood_action->time}}" name="time"></td>
-
-                        <td>
-                            <a class="btn btn-block btn-info btn-sm fa fa-times" href="{{route('admin.bloodactions.list')}}"> Откажи</a>
-                        </td>
-                        <td>
-                            <button type="submit"  class="btn btn-block btn-success btn-sm fa fa-times"> Зачувај</button>
-                        </td>
-                        </form>
-                    </tr>
-                    </tbody>
-                </table>
+        <form role="form" method="POST" action="{{route('admin.bloodactions.update',$blood_action->id)}}">
+            {{ csrf_field() }}
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="exampleInputName1">Име</label>
+                    <input type="text" class="form-control" value="{{$blood_action->name}}" required name="name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputSurname1">Локација</label>
+                    <input type="text" class="form-control" value="{{$blood_action->location}}" required name="location">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputYears1">Град</label>
+                    <select class="form-control" required name="city">
+                        <option hidden value="{{$blood_action->city_id}}">{{$blood_action->city->name}}</option>
+                        @foreach($cities as $city)
+                            <option value="{{$city->id}}">{{$city->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputYears1">Датум</label>
+                    <input type="date" required class="form-control" value="{{$blood_action->date}}" name="date">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputYears1">Време</label>
+                    <input type="time" required class="form-control" value="{{$blood_action->time}}" name="time">
+                </div>
             </div>
-        </div>
+            <!-- /.box-body -->
+            <div class="box-footer buttons">
+                <a class="btn btn-block btn-info btn-sm fa fa-times" href="{{route('admin.bloodactions.list')}}"  style="display:inline"> Откажи</a>
+                <button type="submit" class="btn btn-success fa fa-check" style="display:inline"> Зачувај</button>
+            </div>
+        </form>
     </div>
     @endsection
