@@ -5,13 +5,11 @@
     @include("includes.head")
 </head>
 <body>
+@include("includes.header")
 <div class="main-wrap">
-    @include("includes.header")
-    <div class="main-container">
-        @yield("content")
-    </div>
-    @include("includes/footer")
+    @yield("content")
 </div>
+@include("includes/footer")
 @include("includes/scripts")
 </body>
 </html>

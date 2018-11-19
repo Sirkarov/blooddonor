@@ -1,9 +1,7 @@
-
 @extends('master')
-<html lang="{{ app()->getLocale() }}">
-    <body>
-        @include('includes.carousel')
-        @include('includes.main')
-    @include('includes.about')
-    </body>
-</html>
+@section('content')
+<div class="main-wrap">
+    @include("includes.home")
+    @include("includes.donors")
+</div>
+@endsection
