@@ -9,21 +9,30 @@
     <!-- begin container -->
     <div class="container home-content">
         <div class="row">
-           <div class="col-lg-6 offset-3" style="padding-bottom: 70px;">
-               <h2><strong>Мал чекор за човештвото,голем за ХУМАНОСТА</strong></h2>
-               <button type="button" class="btn btn-danger" style="width: 300px;height: 55px"><strong>ЗАКАЖИ ТЕРМИН ЗА ДАРУВАЊЕ</strong></button>
+           <div class="col-lg-6 offset-3" style="padding-bottom: 40px;">
+               <h3><strong>Биди Хуман,Спаси Живот</strong></h3>
+               <button type="button" class="hover btn btn-default" style="width: 300px;height: 55px"><strong>ЗАКАЖИ ТЕРМИН ЗА ДАРУВАЊЕ</strong></button>
            </div>
         </div>
         <br>
         <div class="row">
+                <div class="col-lg-4">
+                    <a class=jose" href="#">
+                        <img src="images/learn.png"/><br>
+                        <h2><strong>Дознај Повеќе</strong></h2>
+                    </a>
+                </div>
             <div class="col-lg-4">
-                <h2><strong>Дознај Повеќе</strong></h2>
+                <a class=jose" href="#">
+                    <img src="images/eligibility.png"/><br>
+                    <h2><strong>Подобности</strong></h2>
+                </a>
             </div>
             <div class="col-lg-4">
-                <h2><strong>Подобности</strong></h2>
-            </div>
-            <div class="col-lg-4">
-                <h2><strong>Донирај</strong></h2>
+                <a class=jose" href="#">
+                    <img src="images/donate.png"/><br>
+                    <h2><strong>Донирај</strong></h2>
+                </a>
             </div>
         </div>
 

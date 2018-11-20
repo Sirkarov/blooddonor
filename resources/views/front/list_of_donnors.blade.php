@@ -7,7 +7,7 @@
                 <div class="card border-pink border-lighten-3" style="background-color: lightgrey">
                     <div class="text-center">
                         <div class="card-body">
-                            <img src="images/user-1.jpg" class="rounded-circle  height-150" alt="Card image">
+                            <img src="images/user-2.jpg" class="rounded-circle  height-150" alt="Card image">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title"> {{$donor -> name}} {{$donor -> surname}}</h5>

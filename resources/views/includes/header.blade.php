@@ -8,13 +8,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+
             <a href="/" class="navbar-brand">
-                <span class="blink"><img class="logo pull-left" src="../images/logo.png"></span>
-                <span class="logo-text">
-                <span class="subbrend-text" style="color:black"><strong>krvodaritel.mk</strong></span><br>
-                <span class="brand-text" style="color:red"><b>Сервис за Крводарители</b></span>
-            </span>
+                <div class="row">
+                    <span ><img class="logo" src="../images/logo.png"></span>
+                    <span style="color:red;font-size: 20px;margin-top:5px"><b>Сервис за Крводарители</b></span>
+                </div>
             </a>
+
         </div>
         <!-- end navbar-header -->
         <!-- begin navbar-collapse -->
@@ -30,3 +31,12 @@
     </div>
     <!-- end container -->
 </div>
+
+    {{--
+    <a href="/" class="navbar-brand">
+        <span class="blink"><img class="logo pull-left" src="../images/logo.png"></span>
+        <span class="logo-text">
+                    <span class="subbrend-text" style="color:black"><strong>krvodaritel.mk</strong></span><br>
+                    <span class="brand-text" style="color:red"></span>
+                </span>
+    </a>--}}
