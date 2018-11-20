@@ -1,11 +1,10 @@
 <div id="team" class="content" data-scrollview="true">
     <!-- begin container -->
     <div class="container">
-        <h2 class="content-title">Our Team</h2>
-        <p class="content-desc">
-            Phasellus suscipit nisi hendrerit metus pharetra dignissim. Nullam nunc ante, viverra quis<br />
-            ex non, porttitor iaculis nisi.
-        </p>
+        <h3 class="content-title"><strong>Нашите Најнови Крводарители</strong></h3>
+        <h5 class="content-desc">
+            Ова се крводарителите кои денес даруваа за првпат крв и запливаа во водите на крводарителството и хуманоста.
+        </h5>
         <!-- begin row -->
         <div class="row">
             <!-- begin col-4 -->
@@ -17,13 +16,9 @@
                     </div>
                     <div class="info">
                         <h3 class="name">Ryan Teller</h3>
-                        <div class="title text-theme">FOUNDER</div>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                        <div class="social">
-                            <a href="#"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-                            <a href="#"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g fa-lg fa-fw"></i></a>
-                        </div>
+                        <div class="title text-theme">Архитект</div>
+                        <p>Мотивацијата и мислата да станам крводарител ја имав како мал и затоа сега кога наполнив 18 години конечно
+                            го направив тоа.</p>
                     </div>
                 </div>
                 <!-- end team -->
@@ -38,13 +33,8 @@
                     </div>
                     <div class="info">
                         <h3 class="name">Johnny Cash</h3>
-                        <div class="title text-theme">WEB DEVELOPER</div>
-                        <p>Donec quam felis, ultricies nec, pellentesque eu sem. Nulla consequat massa quis enim.</p>
-                        <div class="social">
-                            <a href="#"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-                            <a href="#"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g fa-lg fa-fw"></i></a>
-                        </div>
+                        <div class="title text-theme">WEB Девелопер</div>
+                        <p>Никогаш не размислував едноставно ја посетив страната закажав термин и донирав,и не згрешив со одлуката.</p>
                     </div>
                 </div>
                 <!-- end team -->
@@ -59,13 +49,8 @@
                     </div>
                     <div class="info">
                         <h3 class="name">Mia Donovan</h3>
-                        <div class="title text-theme">WEB DESIGNER</div>
-                        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. </p>
-                        <div class="social">
-                            <a href="#"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-                            <a href="#"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g fa-lg fa-fw"></i></a>
-                        </div>
+                        <div class="title text-theme">Такси Возач</div>
+                        <p>Отсекогаш сакав да дарувам крв и сега конечно се решив да го направам тоа и сум пресреќен. </p>
                     </div>
                 </div>
                 <!-- end team -->

@@ -1,4 +1,4 @@
-<h1>
+@extends('master')
+@section('content')
 
-    helllloo profileee
-</h1>
+    @endsection

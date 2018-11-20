@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="/" class="navbar-brand">
-                <span class="blink"><img class="logo pull-left" src="images/logo.png"></span>
+                <span class="blink"><img class="logo pull-left" src="../images/logo.png"></span>
                 <span class="logo-text">
                 <span class="subbrend-text" style="color:black"><strong>krvodaritel.mk</strong></span><br>
                 <span class="brand-text" style="color:red"><b>Сервис за Крводарители</b></span>
