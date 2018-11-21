@@ -9,13 +9,13 @@
     <!-- begin container -->
     <div class="container home-content">
         <div class="row">
-           <div class="col-lg-6 offset-3" style="padding-bottom: 40px;">
+           <div class="col-lg-6 offset-3" style="padding-bottom: 40px;margin-top: -100px;">
                <h3><strong>Биди Хуман,Спаси Живот</strong></h3>
                <button type="button" class="hover btn btn-default" style="width: 300px;height: 55px"><strong>ЗАКАЖИ ТЕРМИН ЗА ДАРУВАЊЕ</strong></button>
            </div>
         </div>
         <br>
-        <div class="row">
+        <div class="row" style="margin-top: 70px;">
                 <div class="col-lg-4">
                     <a class=jose" href="#">
                         <img src="images/learn.png"/><br>

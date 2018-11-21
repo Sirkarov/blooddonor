@@ -1,4 +1,4 @@
-<div id="header" class="header navbar navbar-default navbar-fixed-top">
+<div id="header" class="header navbar navbar-default navbar-fixed-top" style="margin-top: -14px;height: 60px;">
     <!-- begin container -->
     <div class="container">
         <!-- begin navbar-header -->
@@ -8,14 +8,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
             <a href="/" class="navbar-brand">
                 <div class="row">
-                    <span ><img class="logo" src="../images/logo.png"></span>
-                    <span style="color:red;font-size: 20px;margin-top:5px"><b>Сервис за Крводарители</b></span>
+                    <span ><img class="logo" src="../images/logo.png" style="max-height: 43px"></span>
+                    <span style="color:red;font-size: 20px;margin-top:-5px"><b>Сервис за Крводарители</b></span>
                 </div>
             </a>
-
         </div>
         <!-- end navbar-header -->
         <!-- begin navbar-collapse -->
@@ -24,7 +22,7 @@
                 <li class="nav-item"><a class="nav-link" href="/"><i class="fa fa-home"></i> ДOMA</a></li>
                 <li class="nav-item"><a class="nav-link" href="/blood_donors"><i class="fa fa-users"></i> КРВОДАРИТЕЛИ</a></li>
                 <li class="nav-item"><a class="nav-link" href="/blood_actions"><i class="fa fa-map-marker"></i> КРВОДАРИТЕЛСКИ АКЦИИ</a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-sign-in"></i> НАЈАВA</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-sign-in-alt"></i> НАЈАВA</a></li>
             </ul>
         </div>
         <!-- end navbar-collapse -->
