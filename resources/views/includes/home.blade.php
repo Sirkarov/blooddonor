@@ -17,19 +17,19 @@
         <br>
         <div class="row" style="margin-top: 70px;">
                 <div class="col-lg-4">
-                    <a class=jose" href="#">
+                    <a href="#">
                         <img src="images/learn.png"/><br>
                         <h2><strong>Дознај Повеќе</strong></h2>
                     </a>
                 </div>
             <div class="col-lg-4">
-                <a class=jose" href="#">
+                <a  href="#">
                     <img src="images/eligibility.png"/><br>
                     <h2><strong>Подобности</strong></h2>
                 </a>
             </div>
             <div class="col-lg-4">
-                <a class=jose" href="#">
+                <a href="#">
                     <img src="images/donate.png"/><br>
                     <h2><strong>Донирај</strong></h2>
                 </a>
