@@ -35,4 +35,25 @@
     transform: scale(1.2);
     transition: transform .3s;
 }
-
+.logo-footer h3,h6{
+    color:white;
+    font-weight: bold;
+}
+.logo-footer a:hover{
+    text-decoration: none;
+}
+.menu-footer h3,h5{
+    color:white;
+    font-weight: bold;
+}
+.menu-footer a h5:hover{
+    transform: scale(1.2);
+    transition: transform .5s;
+}
+.menu-footer a:hover{
+    text-decoration: none;
+}
+.donate-footer h3,p{
+    color:white;
+    font-weight: bold;
+}

@@ -11,7 +11,7 @@
         <div class="row">
            <div class="col-lg-6 offset-3" style="padding-bottom: 40px;margin-top: -100px;">
                <h3><strong>Биди Хуман,Спаси Живот</strong></h3>
-               <button type="button" class="hover btn btn-default" style="width: 300px;height: 55px"><strong>ЗАКАЖИ ТЕРМИН ЗА ДАРУВАЊЕ</strong></button>
+               <button type="button" class="hover btn btn-default" style="width: 300px;height: 55px;font-size: 16px">ЗАКАЖИ ТЕРМИН ЗА ДАРУВАЊЕ</button>
            </div>
         </div>
         <br>

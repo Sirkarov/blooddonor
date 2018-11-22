@@ -38,7 +38,7 @@
             <!-- /.box-body -->
             <div class="box-footer buttons">
                 <a class="btn btn-block btn-info btn-sm fa fa-times" href="{{route('admin.bloodactions.list')}}"  style="display:inline"> Откажи</a>
-                <button type="submit" class="btn btn-success fa fa-check" style="display:inline"> Додади</button>
+                    <button type="submit" class="btn btn-success fa fa-check" style="display:inline"> Додади</button>
             </div>
         </form>
         <!-- form end  -->
