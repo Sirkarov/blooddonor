@@ -1,0 +1,24 @@
+@extends('master')
+@section('content')
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    <h1>Josif</h1>
+    @endsection

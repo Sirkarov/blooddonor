@@ -56,7 +56,13 @@
             </span>
                 </a>
             </li>
-
+            <li class="active">
+                <a href="{{asset('admin/subscribers')}}">
+                    <i class="fa  fa-location-arrow"></i> <span>Уреди  Претплатници</span>
+                    <span class="pull-right-container">
+            </span>
+                </a>
+            </li>
         </ul>
     </section>
     <!-- /.sidebar -->

@@ -27,16 +27,16 @@
                <div class="form-group">
                        <div class="input-group">
                            <input type="email" required class="form-control" placeholder="Внесете email адреса" name="email">
-                           <button class="btn btn-default" type="submit" style="margin-left: 2px;background-color: white;font-weight: bold;">Испрати</button>
+                           <button class="btn btn-default" type="submit" style="margin-left: 2px;background-color: white;font-weight: bold;color:grey">Испрати</button>
                        </div>
                </div>
            </div>
        </div>
         <div class="row"  style="padding-top:40px">
-            <div class="copy col-lg-6">
+            <div class="copy col-lg-6 text-left">
                 <h2  style="color:white;font-size:17px;font-weight: bold">© Copyright 2018 krvodaritel.mk - сите права се заштитени</h2>
             </div>
-            <div class="follow col-lg-5 offset-1" style="margin-top: -14px;">
+            <div class="follow col-lg-6 text-right" style="margin-top: -14px;">
                 <h2 style="color:white;font-size:17px;font-weight: bold">Следете не:
                     <a href="#"><i class="fab fa-facebook-f fa-fw"></i></a>
                     <a href="#"><i class="fab fa-instagram fa-fw"></i></a>

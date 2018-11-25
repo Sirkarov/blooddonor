@@ -46,4 +46,15 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
         Route::delete('delete', 'Admin\BloodActionController@delete')->name('delete');
     });
 
+    #Subrcibers routes
+    Route::group(['prefix' => 'subscribers', 'as' => 'subscribers.'], function () {
+        Route::get('/', 'Admin\SubscribeController@list')->name('list');
+        Route::get('create', 'Admin\SubscribeController@create')->name('create');
+        Route::post('store', 'Admin\SubscribeController@store')->name('store');
+        Route::delete('delete', 'Admin\SubscribeController@delete')->name('delete');
+        Route::get('edit/{id}', 'Admin\SubscribeController@edit')->name('edit');
+        Route::post('update/{id}', 'Admin\SubscribeController@update')->name('update');
+        Route::post('testStore', 'Admin\SubscribeController@testStore')->name('testStore');
+    });
+
 });

@@ -17,7 +17,7 @@
         <br>
         <div class="row" style="margin-top: 70px;">
                 <div class="col-lg-4">
-                    <a href="#">
+                    <a href="/learn">
                         <img src="images/learn.png"/><br>
                         <h2><strong>Дознај Повеќе</strong></h2>
                         <h5>Дознај како функционира крводарителството и на кому помага</h5>
