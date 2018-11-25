@@ -20,18 +20,21 @@
                     <a href="#">
                         <img src="images/learn.png"/><br>
                         <h2><strong>Дознај Повеќе</strong></h2>
+                        <h5>Дознај како функционира крводарителството и на кому помага</h5>
                     </a>
                 </div>
             <div class="col-lg-4">
                 <a  href="#">
                     <img src="images/eligibility.png"/><br>
-                    <h2><strong>Подобности</strong></h2>
+                    <h2><strong>Бенефиции</strong></h2>
+                    <h5>Погледни кои се поволностите ако сте крводарител</h5>
                 </a>
             </div>
             <div class="col-lg-4">
                 <a href="#">
                     <img src="images/donate.png"/><br>
-                    <h2><strong>Донирај</strong></h2>
+                    <h2><strong>Донирање</strong></h2>
+                    <h5>Донирање и најчесто поставувани прашања</h5>
                 </a>
             </div>
         </div>
