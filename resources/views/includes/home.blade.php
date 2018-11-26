@@ -33,8 +33,8 @@
             <div class="col-lg-4">
                 <a href="#">
                     <img src="images/donate.png"/><br>
-                    <h2><strong>Донирање</strong></h2>
-                    <h5>Донирање и најчесто поставувани прашања</h5>
+                    <h2><strong>Прашања</strong></h2>
+                    <h5>Најчесто поставувани прашања за Крводарителството</h5>
                 </a>
             </div>
         </div>

@@ -70,3 +70,9 @@
     transform: scale(1.4);
     transition: transform .5s;
 }
+.learn h1{
+    font-weight: bold;
+}
+.learn h6{
+    color:black;
+}
