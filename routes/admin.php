@@ -55,6 +55,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
         Route::get('edit/{id}', 'Admin\SubscribeController@edit')->name('edit');
         Route::post('update/{id}', 'Admin\SubscribeController@update')->name('update');
         Route::post('testStore', 'Admin\SubscribeController@testStore')->name('testStore');
+        Route::post('frontStore', 'Admin\SubscribeController@frontStore')->name('frontStore');
+
     });
+
 
 });

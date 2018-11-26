@@ -1,38 +1,38 @@
 @extends('admin.master')
-@extends('admin.master')
 @section('content')
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Users Table</h3>
         </div>
-        <!-- /.box-header -->
         <div class="box-body">
             <div class="row">
-                <div class="col-lg-2"><a class="btn btn-success" href={{asset('/admin/subscribers/create')}}>Додади Нов Претплатник</a></div>
-                <form role="form" method="POST" action="{{route('admin.subscribers.store')}}">
-                    {{ csrf_field() }}
-                    <div class="box-body">
-                        <div class="form-group">
-                            <label>Име на Градот</label><br><br>
-                            <input type="text" class="form-control" id="exampleInpuNameCharacteristic1" placeholder="Внеси Име на Градот" name="city">
+                <div class="col-lg-4">
+                    <form role="form" method="POST" action="{{route('admin.subscribers.store')}}">
+                        {{ csrf_field() }}
+                        <div class="box-body">
+                            <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group" style="display: inline">
+                                    <label for="exampleInputEmail1">Внеси нов Претплатник</label>
+                                    <input type="email" required class="form-control" placeholder="Еmail Адреса" name="email">
+                                </div>
+                                <button type="submit" class="btn btn-success fa fa-check pull-left" style="margin-top: 10px;height: 34px"> Додади Претплатник</button>
+                            </div>
+                            </div>
                         </div>
-                    </div>
-                    <!-- /.box-body -->
-
-                    <div class="box-footer buttons">
-                        <a class="btn btn-block btn-info btn-sm fa fa-times" href="{{route('admin.cities.list')}}"  style="display:inline"> Откажи</a>
-                        <button type="submit" class="btn btn-success fa fa-check" style="display:inline"> Додади</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
             <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-lg-12">
                         <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
                             <thead>
                             <tr role="row">
-                                <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 297px;">ID</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 257px;">Email</th>
+                                <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 20px;">ID</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 80px;">Email</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 30px;"></th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 30px;"></th>
                             </thead>
                             <tbody id="Click">
                             @foreach($subscribers as $subscriber)
@@ -40,11 +40,10 @@
                                     <td class="sorting_1">{{$subscriber->id}}</td>
                                     <td>{{ $subscriber->email }}</td>
                                     <td>
-                                        <a class="btn btn-block btn-warning btn-sm"  href="{{route('admin.users.edit', $user->id )}}">Edit</a>
+                                        <a class="btn btn-block btn-warning btn-sm"  href="{{route('admin.subscribers.edit', $subscriber->id )}}">Edit</a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-block btn-danger delete-button btn-sm" data-id="{{$user->id}}" data-token="{{csrf_token()}}" data-url="{{route('admin.subscribers.delete')}}">Delete
-                                        </a>
+                                        <a class="btn btn-block btn-danger delete-button btn-sm" data-id="{{$subscriber->id}}" data-token="{{csrf_token()}}" data-url="{{route('admin.subscribers.delete')}}">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -53,8 +52,8 @@
                             <tr>
                                 <th rowspan="1" colspan="1">ID</th>
                                 <th rowspan="1" colspan="1">Email</th>
-                                <th rowspan="1" colspan="1"></th>
-                                <th rowspan="1" colspan="1"></th>
+                                <th rowspan="1" colspan="1">Edit</th>
+                                <th rowspan="1" colspan="1">Delete</th>
                             </tr>
                             </tfoot>
                         </table></div></div>

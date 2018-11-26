@@ -24,12 +24,15 @@
            <div class="donate-footer col-lg-3 col-md-3 col-sm-3">
                <h3>Известувања</h3>
                <h6>Добивајте известувања за сите крводарителски акции,огласи и новости за крводарителството во Македонија </h6>
+               <form role="form" method="POST" action="{{route('admin.subscribers.frontStore')}}">
+                   {{ csrf_field() }}
                <div class="form-group">
                        <div class="input-group">
                            <input type="email" required class="form-control" placeholder="Внесете email адреса" name="email">
                            <button class="btn btn-default" type="submit" style="margin-left: 2px;background-color: white;font-weight: bold;color:grey">Испрати</button>
                        </div>
                </div>
+               </form>
            </div>
        </div>
         <div class="row"  style="padding-top:40px">
