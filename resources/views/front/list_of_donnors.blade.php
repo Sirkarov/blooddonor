@@ -4,7 +4,7 @@
         <div class="col-lg-12 text-center" style="margin-bottom:10px"><h1><strong>Листа на Крводарители во Македонија</strong></h1></div>
         @foreach($blood_donors as $donor)
         <div class="col-lg-4" style="margin-bottom:25px">
-                <div class="card border-pink border-lighten-3" style="background-color: lightgrey">
+                <div class="card border-pink border-lighten-3" style="background-color: #f2f2f2">
                     <div class="text-center">
                         <div class="card-body">
                             <img src="images/user-2.jpg" class="rounded-circle  height-150" alt="Card image">

@@ -19,4 +19,12 @@ class IndexController extends Controller
     {
         return view('front.learn');
     }
+    public function benefits()
+    {
+        return view('front.benefits');
+    }
+    public function questions()
+    {
+        return view('front.questions');
+    }
 }

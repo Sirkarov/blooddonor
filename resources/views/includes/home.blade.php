@@ -24,14 +24,14 @@
                     </a>
                 </div>
             <div class="col-lg-4">
-                <a  href="#">
+                <a  href="/benefits">
                     <img src="images/eligibility.png"/><br>
                     <h2><strong>Бенефиции</strong></h2>
                     <h5>Погледни кои се поволностите ако сте крводарител</h5>
                 </a>
             </div>
             <div class="col-lg-4">
-                <a href="#">
+                <a href="/questions">
                     <img src="images/donate.png"/><br>
                     <h2><strong>Прашања</strong></h2>
                     <h5>Најчесто поставувани прашања за Крводарителството</h5>
