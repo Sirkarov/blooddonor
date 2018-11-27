@@ -44,4 +44,22 @@ class SubscribeController extends Controller
         return response()->json(['status' => 'success']);
     }
 
+    public function edit($id)
+    {
+        $subscriber = Subscribe::findorFail($id);
+
+        return view('admin.subscribers.edit',compact('subscriber'));
+    }
+
+    public function update(Request $request,$id)
+    {
+        $subscriber = Subscribe::findorFail($id);
+
+        $subscriber->email = $request->get('email');
+
+        $subscriber->save();
+
+
+        return redirect('admin/subscribers')->with(['success'=>'succesfully added']);
+    }
 }

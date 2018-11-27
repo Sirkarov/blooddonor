@@ -27,7 +27,7 @@
             <li class="header">MAIN NAVIGATION</li>
             <li class="active treeview menu-open">
                 <a href="#">
-                    <i class="fa fa-user"></i> <span>Уреди Корисници</span>
+                    <i class="fa fa-user"></i> <span>Корисници</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -51,14 +51,21 @@
             </li>
             <li class="active">
                 <a href="{{asset('admin/cities')}}">
-                    <i class="fa  fa-location-arrow"></i> <span>Уреди  Градови</span>
+                    <i class="fa  fa-location-arrow"></i> <span>Градови</span>
                     <span class="pull-right-container">
             </span>
                 </a>
             </li>
             <li class="active">
                 <a href="{{asset('admin/subscribers')}}">
-                    <i class="fa  fa-location-arrow"></i> <span>Уреди  Претплатници</span>
+                    <i class="fa  fa-location-arrow"></i> <span>Претплатници</span>
+                    <span class="pull-right-container">
+            </span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="{{asset('admin/posts')}}">
+                    <i class="fa  fa-location-arrow"></i> <span>Огласи</span>
                     <span class="pull-right-container">
             </span>
                 </a>

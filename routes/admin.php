@@ -59,5 +59,17 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
 
     });
 
+    #Posts routes
+    Route::group(['prefix' => 'posts', 'as' => 'posts.'], function () {
+        Route::get('/', 'Admin\PostController@list')->name('list');
+        Route::get('create', 'Admin\PostController@create')->name('create');
+        Route::post('store', 'Admin\PostController@store')->name('store');
+        Route::delete('delete', 'Admin\PostController@delete')->name('delete');
+        Route::get('edit/{id}', 'Admin\PostController@edit')->name('edit');
+        Route::post('update/{id}', 'Admin\PostController@update')->name('update');
+        Route::post('testStore', 'Admin\PostController@testStore')->name('testStore');
+        Route::post('frontStore', 'Admin\PostController@frontStore')->name('frontStore');
+
+    });
 
 });
