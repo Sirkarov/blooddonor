@@ -24,7 +24,6 @@ class UserController extends Controller
     }
     public function create()
     {
-        $users = User::all();
         $genderTypes = GenderType::all();
         $cities = City::all();
         $bloodTypes = BloodType::all();

@@ -15,9 +15,16 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('title');
+            $table->unsignedInteger('city_id')->nullable();
+            $table->unsignedInteger('blood_type_id')->nullable();
             $table->text('description');
             $table->timestamps();
+
+
+
+            #Constraints
+            $table->foreign("city_id")->references("id")->on("cities")->onDelete("cascade")->onUpdate("cascade");
+            $table->foreign("blood_type_id")->references("id")->on("blood_types")->onDelete("cascade")->onUpdate("cascade");
         });
     }
 

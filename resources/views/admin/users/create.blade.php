@@ -1,4 +1,3 @@
-@section('title')
 @extends('admin.master')
 @section('content')
 

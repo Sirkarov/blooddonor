@@ -54,7 +54,8 @@
                                         <a class="btn btn-block btn-warning btn-sm"  href="{{route('admin.users.edit', $user->id )}}">Edit</a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-block btn-danger delete-button btn-sm" data-id="{{$user->id}}" data-token="{{csrf_token()}}" data-url="{{route('admin.users.delete')}}">Delete
+                                        <a class="btn btn-block btn-danger delete-button btn-sm" data-id="{{$user->id}}"
+                                           data-token="{{csrf_token()}}" data-url="{{route('admin.users.delete')}}">Delete
                                         </a>
                                     </td>
                                 </tr>

@@ -9,7 +9,20 @@ class Post extends Model
     public $table = "posts";
 
     public $fillable = [
-        'tittle',
-        'description'
+        'description',
+        'city_id',
+        'blood_type_id'
     ];
+
+    public function city()
+    {
+        return $this->belongsTo(City::class,"city_id");
+    }
+
+    public function bloodType()
+    {
+        return $this->belongsTo(BloodType::class,"blood_type_id");
+    }
+
+
 }
