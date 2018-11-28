@@ -45,8 +45,10 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::findOrFail($id);
+        $cities = City::all();
+        $blood_types = BloodType::all();
 
-        return view('admin.posts.edit', compact('post'));
+        return view('admin.posts.edit', compact('post','cities','blood_types'));
     }
     public function update(Request $request,$id)
     {
