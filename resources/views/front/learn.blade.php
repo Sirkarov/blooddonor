@@ -1,5 +1,6 @@
 @extends('master')
-<div class="learn container" style="margin-top: 100px;padding-bottom: 50px;">
+@section('content')
+<div class="learn container" style="padding-top:20px;">
     <div class="row">
         <div class="col-lg-6">
         <img src="images/bloodcenter.jpg" style="width: 100%">
@@ -72,3 +73,4 @@
 </div>
     <br><br>
 </div>
+@endsection

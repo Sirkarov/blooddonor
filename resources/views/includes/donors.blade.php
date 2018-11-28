@@ -1,4 +1,4 @@
-<div id="team" class="content" data-scrollview="true">
+<div id="team" class="content" data-scrollview="true" style="background-color: #f5f5ef">
     <!-- begin container -->
     <div class="container">
         <h3 class="content-title"><strong>Нашите Најнови Крводарители</strong></h3>

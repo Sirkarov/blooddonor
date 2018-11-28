@@ -1,5 +1,6 @@
 @extends('master')
-<div class="benefits container" style="margin-top: 100px;padding-bottom: 50px;">
+@section('content')
+<div class="benefits container" style="padding-top:20px;">
     <div class="row">
         <div class="col-lg-4">
             <img src="images/benefit.jpg" style="width: 100%;height: 275px;">
@@ -40,3 +41,4 @@
 
     </div>
 </div>
+@endsection

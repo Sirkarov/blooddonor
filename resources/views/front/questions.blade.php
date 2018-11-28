@@ -1,12 +1,13 @@
 @extends('master')
-<div class="questions container" style="margin-top: 100px;padding-bottom: 50px;">
+@section('content')
+<div class="questions container" style="padding-top:20px;">
     <h1 style="font-weight: bold">Најчесто поставувани прашања за Крводарителството</h1>
     <div class="row">
         <div class="col-lg-12">
-            <div class="card" style=" background-color: #f2f2f2">
+            <div class="card">
                 <h5 class="card-header h5" style="background-color: #ff0000;color:white;">Како се станува доброволен дарител на крв?</h5>
                 <div class="card-body">
-                    <div class="row text-center">
+                    <div class="row">
                         <h5>
                             Едноставно – најпрво морате да донесете одлука дека сакате да дарувате крв и така да спасите некој човечки живот.
                             Јавете се во Црвениот крст или во најблиската трансфузиолошка служба.
@@ -233,3 +234,4 @@
         </div>
     </div>
 </div>
+@endsection

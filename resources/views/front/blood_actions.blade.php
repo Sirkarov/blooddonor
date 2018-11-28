@@ -1,7 +1,7 @@
 @extends('master')
+@section('content')
 <div class="container">
-
-    <div class="row" style="margin-top:120px;padding-bottom: 20px">
+    <div class="row">
         <div class="col-lg-12 text-center" style="margin-bottom:10px"><h1><strong>Крводарителски Акции во Македонија 2018/19 година</strong></h1></div>
     @foreach($blood_actions as $action)
         <div class="col-lg-12" style="margin-bottom: 10px;">
@@ -32,6 +32,4 @@
     @endforeach
     </div>
 </div>
-{{--<h5 class="card-title">Special title treatment</h5>
-<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-<a href="#!" class="btn btn-primary">Go somewhere</a>--}}
+@endsection

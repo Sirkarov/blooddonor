@@ -27,8 +27,11 @@
      transition: transform .5s;
      text-decoration: none;
  }
+.logo-home:hover{
+    text-decoration: none;
+}
 .header.navbar .navbar-nav>li>a {
-    font-size:17px;
+    font-size:18px;
     font-weight: bold;
 }
 .header.navbar .navbar-nav>li>a:hover {
@@ -47,7 +50,7 @@
     font-weight: bold;
 }
 .menu-footer a h5:hover{
-    transform: scale(1.4);
+    transform: scale(1.9);
     transition: transform .5s;
 }
 .menu-footer a:hover{
@@ -94,4 +97,106 @@
 }
 .questions .row{
     padding-bottom:10px;
+}
+.top-menu-primary {
+    background-color: #f1aa09;
+}
+
+/* Top Menu */
+
+.top-menu {
+    background-color: red;
+    padding: 35px 0;
+}
+
+.top-menu-primary {
+    background-color: red;
+}
+
+.top-menu p {
+    font-size: 1.3rem !important;
+    margin-bottom: 0;
+}
+
+.top-menu-primary a {
+    color: white !important;
+}
+
+.top-menu-primary .right:hover {
+    text-decoration: none;
+    transform: scale(1.2);
+    transition: transform .5s;
+}
+.top-menu-primary p {
+    color: white !important;
+    text-align: left;
+}
+
+.top-menu .left i {
+    margin-right: 8px;
+}
+
+.top-menu .right i {
+    margin-left: 8px;
+}
+
+.top-menu .right {
+    float: right;
+    text-align: right;
+}
+
+.top-menu .right a:hover {
+    margin: 0 0 0 15px;
+}
+
+.btn-top-menu {
+    background: transparent;
+    font-size: 10px !important;
+    font-weight: 700;
+    border: 2px solid #666666;
+    margin: -3px 0 0 10px;
+    padding: 5px 0;
+}
+
+.btn-top-menu:hover {
+    border: 2px solid #f1aa09;
+}
+
+.btn-top-menu a {
+    font-size: 10px !important;
+    margin: 0 !important;
+    padding: 8px;
+}
+
+.btn-top-menu-inverse {
+    background: transparent;
+    font-size: 10px !important;
+    font-weight: 700;
+    border: 2px solid #aaaaaa;
+    margin: -3px 0 0 10px;
+    padding: 5px 0;
+}
+
+.btn-top-menu-inverse:hover {
+    border: 2px solid #f1aa09;
+}
+
+.btn-top-menu-inverse a {
+    font-size: 10px !important;
+    margin: 0 !important;
+    padding: 8px;
+}
+.top-hover:hover{
+    text-decoration: none;
+
+}
+.right a:hover{
+    text-decoration: none;
+}
+.top-menu .right{
+    margin-left:30px;
+}
+/*  End Top Menu */
+.social a:hover{
+    text-decoration: none;
 }

@@ -1,13 +1,14 @@
-<div id="home" class="content has-bg home">
+
+<div id="home" class="content has-bg home" style="max-height: 700px">
     <!-- begin content-bg -->
     <div class="content-bg" style="background-image: url(assets/img/bg/carousel.jpg);"
          data-paroller="true"
-         data-paroller-factor="0.5"
+         data-paroller-factor="1"
          data-paroller-factor-xs="0.25">
     </div>
     <!-- end content-bg -->
     <!-- begin container -->
-    <div class="container home-content">
+    <div class="container home-content" style="margin-top: -150px;">
         <div class="row">
            <div class="col-lg-6 offset-3" style="padding-bottom: 40px;margin-top: -100px;">
                <h3><strong>Биди Хуман,Спаси Живот</strong></h3>
