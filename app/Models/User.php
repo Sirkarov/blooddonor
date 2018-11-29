@@ -38,6 +38,6 @@ class User extends Model
 
     public function bloodType()
     {
-        return $this->belongsTo(BloodType::class,"blood_type_id");
+        return $this->belongsTo("App\Models\BloodType","blood_type_id");
     }
 }

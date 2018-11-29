@@ -23,7 +23,7 @@ Route::get('/admin', 'Admin\AdminController@index');
 
 Route::get('/profile', 'Front\BloodDonorController@profile');
 
-Route::get('/term', 'Front\IndexController@term')->middleware('auth');
+Route::get('term/{id}', 'Front\IndexController@term')->name('term')->middleware('auth');
 
 Route::get('/learn', 'Front\IndexController@learn');
 

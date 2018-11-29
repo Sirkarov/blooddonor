@@ -9,27 +9,27 @@
                         <h2 style="font-weight: bold;">Податоци за Корисникот: </h2>
                         <div class="row">
                             <div class="col-lg-12">
-                                <h3>Име:  <strong>{{Auth::user()->name}} </strong></h3>
+                                <h3>Име:  <strong>{{$user->name}} </strong></h3>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
-                                <h3>Презиме:  <strong>{{Auth::user()->surname}} </strong></h3>
+                                <h3>Презиме:  <strong>{{$user->surname}} </strong></h3>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
-                                <h3>Емаил:  <strong>{{Auth::user()->email}} </strong></h3>
+                                <h3>Емаил:  <strong>{{$user->email}} </strong></h3>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
-                                <h3>Крвна Група:  <strong>{{Auth::user()->genderType}} </strong></h3>
+                                <h3>Крвна Група:  <strong>{{$user->bloodType->type}} </strong></h3>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
-                                <h3>Донации:  <strong>{{Auth::user()->donations}} </strong></h3>
+                                <h3>Донации:  <strong>{{$user->donations}} </strong></h3>
                             </div>
                         </div>
                 </div>

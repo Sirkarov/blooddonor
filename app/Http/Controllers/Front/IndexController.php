@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 
 class IndexController extends Controller
 {
@@ -32,9 +33,11 @@ class IndexController extends Controller
         return view('front.user_profile');
     }
 
-    public function term()
+    public function term($id)
     {
-        return view('front.term');
+        $user = User::findorFail($id);
+
+        return view('front.term',compact('user'));
     }
 
 }

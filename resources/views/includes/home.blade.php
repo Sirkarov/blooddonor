@@ -12,7 +12,7 @@
         <div class="row">
            <div class="col-lg-6 offset-3" style="padding-bottom: 40px;margin-top: -100px;">
                <h3><strong>Биди Хуман,Спаси Живот</strong></h3>
-               <a href="/term"><button type="button" class="hover btn btn-default" style="width: 365px;height: 55px;font-size: 16px">ЗАКАЖИ ТЕРМИН ЗА ДАРУВАЊЕ</button></a>
+               <a href="{{route('term',Auth::user()->id)}}"><button type="button" class="hover btn btn-default" style="width: 365px;height: 55px;font-size: 16px">ЗАКАЖИ ТЕРМИН ЗА ДАРУВАЊЕ</button></a>
            </div>
         </div>
         <br>
