@@ -32,7 +32,7 @@
                     <select class="form-control" required name="bloodType">
                         <option hidden value="">Одбери Крвна Група</option>
                         @foreach($bloodTypes as $type)
-                            <option value="{{$type->id}}" name="city">{{$type->type}}</option>
+                            <option value="{{$type->id}}">{{$type->type}}</option>
                         @endforeach
                     </select>
                 </div>

@@ -32,4 +32,9 @@ class IndexController extends Controller
         return view('front.user_profile');
     }
 
+    public function term()
+    {
+        return view('front.term');
+    }
+
 }

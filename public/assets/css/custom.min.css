@@ -222,8 +222,9 @@
     transition: transform .5s;
 }
 .dropdown .dropdown-menu a{
-    color:red;
+    color:black;
     margin-top:20px;
+    font-weight: bold;
 }
 .dropdown-item{
     margin-top: 1px;
