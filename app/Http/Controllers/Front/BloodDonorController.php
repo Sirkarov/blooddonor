@@ -15,6 +15,6 @@ class BloodDonorController extends Controller
     }
     public function profile()
     {
-        return view('front.profile');
+        return view('front.blood_donor_profile');
     }
 }

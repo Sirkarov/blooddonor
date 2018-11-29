@@ -9,18 +9,21 @@ class User extends Model
     public $table = "users";
 
     public $fillable = [
+        'name',
+        'surname',
+        'email',
+        'password',
+        'years',
         'gender_type_id',
         'city_id',
         'blood_type_id',
         'birth',
-        'name',
-        'surname',
-        'email',
-        'years',
         'donations',
         'phone',
-        'password',
         'image',
+    ];
+    protected $hidden = [
+        'password', 'remember_token',
     ];
 
     public function genderType()

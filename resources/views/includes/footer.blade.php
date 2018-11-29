@@ -26,10 +26,10 @@
                <h6>Добивајте известувања за сите крводарителски акции,огласи и новости за крводарителството во Македонија </h6>
                <form role="form" method="POST" action="{{route('admin.subscribers.frontStore')}}">
                    {{ csrf_field() }}
-               <div class="form-group">
+               <div class="form-group sub">
                        <div class="input-group">
                            <input type="email" required class="form-control" placeholder="Внесете email адреса" name="email">
-                           <button class="btn btn-default" type="submit" style="margin-left: 2px;background-color: white;font-weight: bold;color:grey">Испрати</button>
+                           <button class="btn btn-default" type="submit" style="margin-left: 2px;background-color: white;font-weight: bold;color:red;">Испрати</button>
                        </div>
                </div>
                </form>

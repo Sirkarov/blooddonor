@@ -119,14 +119,9 @@
 }
 
 .top-menu-primary a {
-    color: white !important;
+    color: white;
 }
 
-.top-menu-primary .right:hover {
-    text-decoration: none;
-    transform: scale(1.2);
-    transition: transform .5s;
-}
 .top-menu-primary p {
     color: white !important;
     text-align: left;
@@ -145,9 +140,11 @@
     text-align: right;
 }
 
+/*
 .top-menu .right a:hover {
     margin: 0 0 0 15px;
 }
+*/
 
 .btn-top-menu {
     background: transparent;
@@ -186,17 +183,53 @@
     margin: 0 !important;
     padding: 8px;
 }
-.top-hover:hover{
-    text-decoration: none;
-
-}
-.right a:hover{
-    text-decoration: none;
-}
 .top-menu .right{
     margin-left:30px;
 }
 /*  End Top Menu */
 .social a:hover{
     text-decoration: none;
+}
+
+.sign .row{
+    padding-bottom:10px;
+}
+.sign{
+    padding-top:100px;
+    padding-bottom:160px;
+}
+.sign .card-header{
+    background-color: red;
+    color:white;
+    font-size:25px;
+    text-align: center;
+    font-weight: bold;
+}
+.sign .card-body{
+    font-weight: bold;
+    font-size:20px;
+    padding-top:20px;
+}
+.sign .btn-primary{
+    background-color:red;
+    border-color:red;
+    border-radius:5px;
+    width: 200px;
+    font-weight: bold;
+}
+.sub .btn:hover{
+    transform: scale(1.05);
+    transition: transform .5s;
+}
+.dropdown .dropdown-menu a{
+    color:red;
+    margin-top:20px;
+}
+.dropdown-item{
+    margin-top: 1px;
+}
+.dropdown a{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -40px;
 }

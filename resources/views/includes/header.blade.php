@@ -7,12 +7,35 @@
                 </span>
             </a>
             <span>
-            <a class="right register" href=""><i class="fas fa-lock mr-1"></i> <span>Регистрација</span></a>
+                @guest
+                    @if (Route::has('register'))
+                        <a class="right" href="/register"><i class="fas fa-lock mr-1"></i> <span>Регистрација</span></a>
+                        <a class="right" href="/login"><i class="fas fa-user mr-1"></i> <span>Најава</span></a>
+                    @endif
             </span>
-            <span class="right login">
-                <a class="right" href=""><i class="fas fa-user mr-1"></i> <span>Најава</span></a>
-            </span>
+
         </p>
+            @else
+                <div class="right dropdown">
+                        <a class="right dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ Auth::user()->name }} {{ Auth::user()->surname }}
+                        </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="{{route('user_profile',Auth::user()->id )}}">
+                            Профил
+                        </a>
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                            {{ __('Одјава') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </div>
+            @endguest
     </div><!-- / container -->
 </div>
 <div id="header" class="header navbar navbar-default" style="margin-top: -14px;height: 70px;">

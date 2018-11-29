@@ -21,12 +21,14 @@ class CreateUsersTable extends Migration
             $table->date('birth');
             $table->string('name');
             $table->string('surname');
-            $table->string('email');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->integer('years');
             $table->integer('donations');
             $table->string('phone');
             $table->string('password');
             $table->string('image');
+            $table->rememberToken();
             $table->timestamps();
 
             #Constraints

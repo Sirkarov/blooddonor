@@ -27,4 +27,9 @@ class IndexController extends Controller
     {
         return view('front.questions');
     }
+    public function user_profile()
+    {
+        return view('front.user_profile');
+    }
+
 }
