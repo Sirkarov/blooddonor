@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->unsignedInteger("gender_type_id")->nullable();
             $table->unsignedInteger('city_id')->nullable();
             $table->unsignedInteger('blood_type_id')->nullable();
+            $table->boolean('isAdmin')->default(0);
             $table->date('birth');
             $table->string('name');
             $table->string('surname');

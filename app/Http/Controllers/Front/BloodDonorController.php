@@ -11,10 +11,12 @@ class BloodDonorController extends Controller
     public function index()
     {
         $blood_donors = User::all();
-        return view('front.blood_donors',compact('blood_donors'));
+        return view('front.blood_donors', compact('blood_donors'));
     }
+
     public function profile()
     {
         return view('front.blood_donor_profile');
     }
+
 }

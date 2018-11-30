@@ -11,19 +11,20 @@
 |
 */
 
+Auth::routes();
+
+
 Route::get('/blood_donors', 'Front\BloodDonorController@index');
 
 Route::get('/blood_actions', 'Front\BloodActionsController@actions');
 
 Route::get('/about', 'Front\AboutController@about');
 
-Route::get('/', 'Front\IndexController@index');
-
-Route::get('/admin', 'Admin\AdminController@index');
-
 Route::get('/profile', 'Front\BloodDonorController@profile');
 
-Route::get('term/{id}', 'Front\IndexController@term')->name('term')->middleware('auth');
+Route::get('/term', 'Front\IndexController@term')->name('term')->middleware('auth');
+
+//Route::get('term/{id}', 'Front\IndexController@term')->name('term')->middleware('auth');
 
 Route::get('/learn', 'Front\IndexController@learn');
 
@@ -40,9 +41,27 @@ Route::group(['prefix' => 'blood_donors', 'as' => 'blood_donor.'], function() {
 });
 
 
+Route::get('/', function (){
+    if(!auth()->check()){
+        return view('welcome');
+    }
+    else{
+        if(Auth::user()->isAdmin == 0){
+            return view('welcome');
+        }else{
+            return view('admin.index');
+        }
+    }
+});
 
+Route::group(['middleware' => ['web','auth']],function (){
 
-Auth::routes();
+   Route::get('/home',function (){
+      if(Auth::user()->isAdmin == 0){
+          return view('welcome');
+      }else{
+        return view('admin.index');
+      }
+   });
 
-Route::get('/home', 'HomeController@index')->name('home');
-
+});

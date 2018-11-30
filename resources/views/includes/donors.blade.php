@@ -1,4 +1,4 @@
-<div id="team" class="content" data-scrollview="true" style="background-color: #f5f5ef">
+<div id="new_donors" class="content" data-scrollview="true" style="background-color: #f5f5ef">
     <!-- begin container -->
     <div class="container">
         <h3 class="content-title"><strong>Нашите Најнови Крводарители</strong></h3>
@@ -61,3 +61,4 @@
     </div>
     <!-- end container -->
 </div>
+

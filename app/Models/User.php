@@ -21,6 +21,7 @@ class User extends Model
         'donations',
         'phone',
         'image',
+        'isAdmin'
     ];
     protected $hidden = [
         'password', 'remember_token',

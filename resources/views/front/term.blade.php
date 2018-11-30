@@ -7,7 +7,7 @@
                     <h4 class="card-header text-center" style="background-color: #ff0000;color:white;">Закажи Термин</h4>
                     <div class="card-body">
                         <h2 style="font-weight: bold;">Податоци за Корисникот: </h2>
-                        <div class="row">
+                       {{-- <div class="row">
                             <div class="col-lg-12">
                                 <h3>Име:  <strong>{{$user->name}} </strong></h3>
                             </div>
@@ -31,7 +31,7 @@
                             <div class="col-lg-12">
                                 <h3>Донации:  <strong>{{$user->donations}} </strong></h3>
                             </div>
-                        </div>
+                        </div>--}}
                 </div>
                     </div>
                 </div>

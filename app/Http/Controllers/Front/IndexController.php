@@ -33,9 +33,9 @@ class IndexController extends Controller
         return view('front.user_profile');
     }
 
-    public function term($id)
+    public function term()
     {
-        $user = User::findorFail($id);
+        //$user = User::findorFail($id);
 
         return view('front.term',compact('user'));
     }
