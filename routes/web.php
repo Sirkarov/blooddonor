@@ -32,7 +32,7 @@ Route::get('/benefits', 'Front\IndexController@benefits');
 
 Route::get('/questions', 'Front\IndexController@questions');
 
-Route::get('profile/{id}', 'Front\IndexController@user_profile')->name('user_profile');
+Route::get('profile/{id}', 'Front\IndexController@get_user_profile')->name('user_profile');
 
 Route::group(['prefix' => 'blood_donors', 'as' => 'blood_donor.'], function() {
 
