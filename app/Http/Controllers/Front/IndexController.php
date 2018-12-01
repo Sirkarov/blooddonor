@@ -28,9 +28,10 @@ class IndexController extends Controller
     {
         return view('front.questions');
     }
-    public function get_user_profile()
+    public function get_user_profile($id)
     {
-        return view('front.user.profile');
+        $user = User::findorFail($id);
+        return view('front.user.profile',compact('user'));
     }
 
     public function term()

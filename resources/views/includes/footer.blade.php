@@ -3,7 +3,7 @@
        <div class="row">
            <div class="logo-footer col-lg-3 col-md-3 col-sm-3">
                <a href="/">
-                <span ><img class="logo-footer" src="images/logo-footer.jpg" style="max-width: 80px;"></span>
+                <span ><img class="logo-footer" src="/images/logo-footer.jpg" style="max-width: 80px;"></span>
                    <h6 style="padding-top: 15px">krvodaritel.mk</h6>
                  <h3 style="display: inline">Сервис за Крводарители</h3>
                </a>
