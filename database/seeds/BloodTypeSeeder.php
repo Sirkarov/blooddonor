@@ -18,6 +18,7 @@ class BloodTypeSeeder extends Seeder
     private function getBloodTypes()
     {
         return [
+            '',
             'A+',
             'A-',
             'B+',

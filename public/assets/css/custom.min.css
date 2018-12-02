@@ -237,3 +237,17 @@
 .user-profile .form-control{
     background-color:white;
 }
+.edit-profile-btn{
+    background-color:red;
+    color:white;
+    font-weight: bold;
+
+}
+.edit-profile-btn:hover{
+    background-color:red;
+    color:white;
+
+}
+.cancel-edit-btn{
+    background-color: red;
+}

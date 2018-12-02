@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->unsignedInteger('city_id')->nullable();
             $table->unsignedInteger('blood_type_id')->nullable();
             $table->boolean('isAdmin')->default(0);
-            $table->date('birth');
+            $table->date('birth')->nullable()->default(null);
             $table->string('name');
             $table->string('surname');
             $table->string('email');

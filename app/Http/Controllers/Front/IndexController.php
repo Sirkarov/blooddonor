@@ -33,7 +33,12 @@ class IndexController extends Controller
         $user = User::findorFail($id);
         return view('front.user.profile',compact('user'));
     }
+    public function edit_user_profile($id)
+    {
+        $user = User::findorFail($id);
 
+        return view('front.user.edit',compact('user'));
+    }
     public function term()
     {
         //$user = User::findorFail($id);

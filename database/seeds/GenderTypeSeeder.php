@@ -19,6 +19,7 @@ class GenderTypeSeeder extends Seeder
     private function getGenderTypes()
     {
         return [
+            '',
             'Машко',
             'Женско'
         ];

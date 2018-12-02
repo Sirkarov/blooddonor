@@ -19,6 +19,7 @@ class CitySeeder extends Seeder
     private function getCities()
     {
         return [
+            '',
             'Скопје',
             'Битола',
             'Куманово',

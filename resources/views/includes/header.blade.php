@@ -1,7 +1,7 @@
 <div class="top-menu top-menu-primary">
     <div class="container">
         <p>
-            <a class="logo-home" href="/"><span > <img class="logo" src="../images/logo.gif" style="max-height: 50px;margin-top: -13px;"></span>
+            <a class="logo-home" href="/"><span > <img class="logo" src="/images/logo.gif" style="max-height: 50px;margin-top: -13px;"></span>
                 <span class="social margin-fix left">
                     <span style="font-weight: bold;font-size: 30px">Сервис за Крводарители</span>
                 </span>

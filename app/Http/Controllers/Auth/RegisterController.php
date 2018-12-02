@@ -75,7 +75,6 @@ class RegisterController extends Controller
             'blood_type_id'=>1,
             'phone'=>"",
             'image'=>"",
-            'birth'=>Carbon::now(),
             'years'=>0,
             'donations'=>0,
         ]);
