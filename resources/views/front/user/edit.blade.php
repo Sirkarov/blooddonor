@@ -12,12 +12,14 @@
             </div>
         </div>
         <div class="row">
-        <div class="col-lg-3"><!--left col-->
-            <div class="text-center">
-                <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-                <h6 style="color:black">Upload a different photo...</h6>
-                <input type="file" class="text-center center-block file-upload" style="margin-left:30px">
+        <div class="col-lg-3">
+            <div class="form-group"><!--left col-->
+                <div class="text-center">
+                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+                    <h6 style="color:black">Upload a different photo...</h6>
+                <input type="file" class="text-center center-block file-upload" name="image" style="margin-left:30px">
             </div></hr><br>
+            </div>
 
         </div><!--/col-3-->
         <div class="col-lg-9">
@@ -58,7 +60,7 @@
                         </select>
                             @else
                             <select class="form-control" required name="gender">
-                                <option value="{{$user->genderType}}">{{$user->genderType->type}}</option>
+                                <option value="{{$user->genderType->id}}">{{$user->genderType->type}}</option>
                                 @foreach($genderTypes as $genderType)
                                     <option value="{{$genderType->id}}">{{$genderType->type}}</option>
                                 @endforeach
@@ -69,51 +71,87 @@
                     <div class="col-lg-6">
                     <div class="form-group">
                         <label>Град</label>
+                        @if($user->city->id == 1)
                       <select class="form-control" required name="city">
                           <option  value="">Избери Град</option>
                           @foreach($cities as $city)
                               <option value="{{$city->id}}">{{$city->name}}</option>
                           @endforeach
                       </select>
+                            @else
+                            <select class="form-control" required name="city">
+                                <option  value="{{$user->city->id}}">{{$user->city->name}}</option>
+                                @foreach($cities as $city)
+                                    <option value="{{$city->id}}">{{$city->name}}</option>
+                                @endforeach
+                            </select>
+                        @endif
                     </div>
                 </div>
                     <div class="col-lg-6">
                     <div class="form-group">
                         <label>Крвна Група</label>
+                        @if($user->bloodType->id == 1)
                        <select class="form-control" required name="bloodType">
                            <option value="">Избери Крвна Група</option>
                            @foreach($bloodTypes as $bloodType)
                                <option value="{{$bloodType->id}}">{{$bloodType->type}}</option>
                            @endforeach
                        </select>
+                            @else
+                            <select class="form-control" required name="bloodType">
+                                <option value="{{$user->bloodType->id}}">{{$user->bloodType->type}}</option>
+                                @foreach($bloodTypes as $bloodType)
+                                    <option value="{{$bloodType->id}}">{{$bloodType->type}}</option>
+                                @endforeach
+                            </select>
+                        @endif
                     </div>
                 </div>
                     <div class="col-lg-6">
                     <div class="form-group">
                         <label>Години</label>
+                        @if($user->years == 0)
                         <select class="form-control" required name="years">
                             <option value="">Внеси Години</option>
                             @for($i=17;$i<64;$i++)
                                 <option value="{{$i }}">{{$i}}</option>
                                 @endfor
                         </select>
+                            @else
+                            <select class="form-control" required name="years">
+                                <option value="{{$user->years}}">{{$user->years}}</option>
+                                @for($i=17;$i<64;$i++)
+                                    <option value="{{$i }}">{{$i}}</option>
+                                @endfor
+                            </select>
+                        @endif
                     </div>
                 </div>
                     <div class="col-lg-6">
                     <div class="form-group">
                         <label>Број на Донации</label>
+                        @if($user->donations == 0)
                         <select class="form-control" required name="donations">
                             <option value="">Внеси Број на Донации</option>
                             @for($i=0;$i<150;$i++)
                                 <option value="{{$i}}">{{$i}}</option>
                             @endfor
                         </select>
+                            @else
+                            <select class="form-control" required name="donations">
+                                <option value="{{$user->donations}}">{{$user->donations}}</option>
+                                @for($i=0;$i<150;$i++)
+                                    <option value="{{$i}}">{{$i}}</option>
+                                @endfor
+                            </select>
+                        @endif
                     </div>
                 </div>
                     <div class="col-lg-6">
                     <div class="form-group">
                         <label>Телефон</label>
-                       <input class="form-control" placeholder="Внеси Телефон" type="text" required name="phone">
+                       <input class="form-control" value="{{$user->phone}}" placeholder="Внеси Телефон" type="text" required name="phone">
                     </div>
                 </div>
             </div>

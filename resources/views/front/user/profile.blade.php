@@ -12,7 +12,7 @@
 <div class="col-lg-3"><!--left col-->
 
     <div class="text-center">
-        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+        <img src="{{asset("default_avatar.png")}}" class="avatar img-circle img-thumbnail" alt="avatar">
     </div></hr><br>
 
 </div><!--/col-3-->

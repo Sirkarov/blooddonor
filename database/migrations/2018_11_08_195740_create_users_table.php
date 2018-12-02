@@ -28,7 +28,7 @@ class CreateUsersTable extends Migration
             $table->integer('donations');
             $table->string('phone');
             $table->string('password');
-            $table->string('image');
+            $table->binary('image');
             $table->rememberToken();
             $table->timestamps();
 
