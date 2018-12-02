@@ -36,6 +36,8 @@ Route::get('profile/{id}', 'Front\IndexController@get_user_profile')->name('user
 
 Route::get('profile/edit/{id}', 'Front\IndexController@edit_user_profile')->name('edit_profile');
 
+Route::post('profile/update/{id}','Front\IndexController@user_update')->name('user_update');
+
 Route::group(['prefix' => 'blood_donors', 'as' => 'blood_donor.'], function() {
 
     Route::get('profile/{id}', 'Front\BloodDonorController@profile')->name('profile');

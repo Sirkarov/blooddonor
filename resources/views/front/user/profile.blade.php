@@ -11,11 +11,8 @@
 <div class="row">
 <div class="col-lg-3"><!--left col-->
 
-
     <div class="text-center">
         <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-        <h6 style="color:black">Upload a different photo...</h6>
-        <input type="file" class="text-center center-block file-upload" style="margin-left:30px">
     </div></hr><br>
 
 </div><!--/col-3-->

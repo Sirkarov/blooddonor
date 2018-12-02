@@ -94,6 +94,7 @@ class UserController extends Controller
 
     public function update(Request $request,$id)
     {
+        dd($request);
         $user = User::findorFail($id);
 
         $user->name = $request->get('name');
@@ -111,7 +112,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('admin/users')->with(['success'=>'succesfully added']);
+        return redirect('profile/{{$id}}')->back()->with(['success'=>'succesfully added']);
     }
 
     public function delete(Request $request)
@@ -120,6 +121,11 @@ class UserController extends Controller
         $user->delete();
 
         return response()->json(['status' => 'success']);
+    }
+
+    public function UserUpdate(Request $request,$id)
+    {
+            dd('jsee');
     }
 
 }
