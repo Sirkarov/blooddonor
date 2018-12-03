@@ -59,6 +59,19 @@ class IndexController extends Controller
         $user->phone = $request->get('phone');
         $user->donations = $request->get('donations');
 
+       request()->validate([
+
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
+        ]);
+
+        $imageName = time().'.'.request()->image->getClientOriginalExtension();
+
+        request()->image->move(public_path('uploads'), $imageName);
+
+
+        $user->image = $imageName;
+
         $user->save();
 
         return redirect("profile/$id")->with(['success'=>'succesfully added']);

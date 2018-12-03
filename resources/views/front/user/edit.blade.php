@@ -2,7 +2,7 @@
 @include('includes.user_profile_scripts')
 @section('content')
 <div class="container" style="padding-top:50px;padding-bottom:250px">
-    <form role="form" method="POST" action="{{route('user_update',$user->id)}}">
+    <form role="form" method="POST" action="{{route('user_update',$user->id)}}" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="row">
             <div class="col-lg-9"><h1 style="margin-left: 35px;">{{Auth::user()->name}} {{Auth::user()->surname}}</h1></div>
@@ -15,8 +15,8 @@
         <div class="col-lg-3">
             <div class="form-group"><!--left col-->
                 <div class="text-center">
-                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-                    <h6 style="color:black">Upload a different photo...</h6>
+                    <img src="{{asset("uploads/".$user->image)}}" width="200" height="300" class="avatar img-circle img-thumbnail" alt="avatar">
+                    <h6 style="color:black">Профил</h6>
                 <input type="file" class="text-center center-block file-upload" name="image" style="margin-left:30px">
             </div></hr><br>
             </div>

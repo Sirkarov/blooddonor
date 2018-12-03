@@ -12,7 +12,7 @@
 <div class="col-lg-3"><!--left col-->
 
     <div class="text-center">
-        <img src="{{asset("default_avatar.png")}}" class="avatar img-circle img-thumbnail" alt="avatar">
+        <img src="{{asset("uploads/".$user->image)}}" class="avatar img-circle img-thumbnail" width="200" height="300" alt="avatar">
     </div></hr><br>
 
 </div><!--/col-3-->

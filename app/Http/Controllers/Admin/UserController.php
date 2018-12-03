@@ -42,15 +42,23 @@ class UserController extends Controller
         $user->email = $request->get('email');
         $user->years = $request->get('years');
         $user->phone = $request->get('phone');
-        $user->image = "default";
-        $user->password = "default";
         $user->donations = $request->get('donations');
         $user->birth = $request->get('birth');
 
-        #Save it to the database
+        request()->validate([
+
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
+        ]);
+
+        $imageName = time().'.'.request()->image->getClientOriginalExtension();
+
+        request()->image->move(public_path('uploads'), $imageName);
+
+
+        $user->image = $request->get('image');
         $user->save();
 
-        #And redirect somewhere in the application
         return redirect('admin/users')->with(['success'=>'succesfully added']);
     }
 

@@ -74,7 +74,7 @@ class RegisterController extends Controller
             'city_id'=>1,
             'blood_type_id'=>1,
             'phone'=>"",
-            'image'=>"default_avatar.png",
+            'image'=>'default_avatar.png',
             'years'=>0,
             'donations'=>0,
         ]);
