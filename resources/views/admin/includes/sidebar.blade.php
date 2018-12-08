@@ -70,6 +70,13 @@
             </span>
                 </a>
             </li>
+            <li class="active">
+                <a href="{{asset('admin/questions')}}">
+                    <i class="fa  fa-location-arrow"></i> <span>Прашања</span>
+                    <span class="pull-right-container">
+            </span>
+                </a>
+            </li>
         </ul>
     </section>
     <!-- /.sidebar -->

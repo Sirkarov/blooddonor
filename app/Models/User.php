@@ -41,4 +41,5 @@ class User extends Model
     {
         return $this->belongsTo("App\Models\BloodType","blood_type_id");
     }
+
 }

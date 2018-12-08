@@ -15,7 +15,15 @@ class CreateQuestionsTable extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('user_id')->nullable();
+            $table->text('title');
+            $table->text('description');
+            $table->boolean('isActive')->default(0);
             $table->timestamps();
+
+            #Constraints
+            $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade")->onUpdate("cascade");
+
         });
     }
 

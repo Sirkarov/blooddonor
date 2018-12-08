@@ -72,4 +72,19 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
 
     });
 
+    #Question routes
+    Route::group(['prefix' => 'questions', 'as' => 'questions.'], function () {
+        Route::get('/', 'Admin\QuestionController@list')->name('list');
+        Route::get('create', 'Admin\QuestionController@create')->name('create');
+        Route::post('store', 'Admin\QuestionController@store')->name('store');
+        Route::delete('delete', 'Admin\QuestionController@delete')->name('delete');
+        Route::get('edit/{id}', 'Admin\QuestionController@edit')->name('edit');
+        Route::get('more/{id}', 'Admin\QuestionController@more')->name('more');
+        Route::post('update/{id}', 'Admin\QuestionController@update')->name('update');
+        Route::post('testStore', 'Admin\QuestionController@testStore')->name('testStore');
+        Route::post('frontStore', 'Admin\QuestionController@frontStore')->name('frontStore');
+
+    });
+
 });
+
