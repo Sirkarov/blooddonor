@@ -15,11 +15,11 @@
                     <textarea class="form-control" placeholder="Внеси Опис на Огласот" required rows="5" name="description"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputYears1">Крвна Група</label>
+                    <label>Крвна Група</label>
                     <select class="form-control" required name="bloodType">
-                        <option hidden value="">Одбери Крвна Група</option>
+                        <option value="">Одбери Крвна Група</option>
                         @foreach($bloodTypes as $type)
-                            <option value="{{$type->id}}" name="city">{{$type->type}}</option>
+                            <option value="{{$type->id}}">{{$type->type}}</option>
                         @endforeach
                     </select>
                 </div>

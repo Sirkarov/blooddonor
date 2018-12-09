@@ -1,8 +1,8 @@
 @extends('admin.master')
 @section('content')
+    <h3 class="box-title">Менаџирање Корисници</h3>
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Users Table</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">

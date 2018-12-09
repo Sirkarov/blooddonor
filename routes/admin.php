@@ -68,7 +68,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
         Route::get('edit/{id}', 'Admin\PostController@edit')->name('edit');
         Route::post('update/{id}', 'Admin\PostController@update')->name('update');
         Route::post('testStore', 'Admin\PostController@testStore')->name('testStore');
-        Route::post('frontStore', 'Admin\PostController@frontStore')->name('frontStore');
 
     });
 
@@ -83,6 +82,20 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
         Route::post('update/{id}', 'Admin\QuestionController@update')->name('update');
         Route::post('testStore', 'Admin\QuestionController@testStore')->name('testStore');
         Route::post('frontStore', 'Admin\QuestionController@frontStore')->name('frontStore');
+
+    });
+
+    #Terms routes
+    Route::group(['prefix' => 'terms', 'as' => 'terms.'], function () {
+        Route::get('/', 'Admin\TermController@list')->name('list');
+        Route::get('create', 'Admin\TermController@create')->name('create');
+        Route::post('store', 'Admin\TermController@store')->name('store');
+        Route::delete('delete', 'Admin\TermController@delete')->name('delete');
+        Route::get('edit/{id}', 'Admin\TermController@edit')->name('edit');
+        Route::get('more/{id}', 'Admin\TermController@more')->name('more');
+        Route::post('update/{id}', 'Admin\TermController@update')->name('update');
+        Route::post('testStore', 'Admin\TermController@testStore')->name('testStore');
+        Route::post('frontStore', 'Admin\TermController@frontStore')->name('frontStore');
 
     });
 

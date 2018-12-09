@@ -7,6 +7,7 @@ use App\Models\Question;
 use App\Models\City;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class QuestionController extends Controller
 {
@@ -24,10 +25,10 @@ class QuestionController extends Controller
     }
     public function store(Request $request)
     {
-
         $question = new Question;
-
+        $question->user_id = null;
         $question->title = $request->get('title');
+        $question->description = "";
         $question->save();
 
         return redirect('admin/questions')->with(['success'=>'succesfully added']);
@@ -42,22 +43,29 @@ class QuestionController extends Controller
     }
     public function edit($id)
     {
-        $post = Post::findOrFail($id);
-        $cities = City::all();
-        $blood_types = BloodType::all();
+        $question = Question::findOrFail($id);
+        $users = User::where('isAdmin',0)->get();
 
-        return view('admin.posts.edit', compact('post','cities','blood_types'));
+        return view('admin.questions.edit', compact('question','users'));
     }
     public function update(Request $request,$id)
     {
-        $post = Post::findorFail($id);
+        $question = Question::findorFail($id);
 
-        $post->city_id = $request->get('city');
-        $post->blood_type_id = $request->get('bloodType');
-        $post->description = $request->get('description');
+        $question->user_id = $request->get('user');
+        $question->title = $request->get('title');
+        $question->description =  $request->get('description');
 
-        $post->save();
+        $question->save();
 
-        return redirect('admin/posts')->with(['success'=>'succesfully added']);
+        return redirect('admin/questions')->with(['success'=>'succesfully added']);
     }
+
+    public function more($id)
+    {
+        $question = Question::findOrFail($id);
+
+        return view('admin.questions.more',compact('question'));
+    }
+
 }

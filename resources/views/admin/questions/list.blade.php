@@ -1,6 +1,6 @@
 @extends('admin.master')
 @section('content')
-    <h1 class="box-title">Менаџирање на Претплатници</h1>
+    <h1 class="box-title">Менаџирање на Прашања</h1>
     <div class="box">
         <div class="box-body">
             <div class="row">
@@ -12,7 +12,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group" style="display: inline">
                                         <label for="exampleInputEmail1">Внеси ново Прашање</label>
-                                        <input type="text" required class="form-control" placeholder="Внеси Прашање" name="email">
+                                        <input type="text" required class="form-control" placeholder="Внеси Прашање" name="title">
                                     </div>
                                     <button type="submit" class="btn btn-success fa fa-check pull-left" style="margin-top: 10px;height: 34px"> Додади</button>
                                 </div>
@@ -40,15 +40,18 @@
                             @foreach($questions as $question)
                                 <tr role="row" class="odd">
                                     <td class="sorting_1">{{$question->id}}</td>
-                                    <td>{{ $subscriber->email }}</td>
+                                    <td>{{ $question->isActive }}</td>
+                                    <td>{{$question->user->name}}</td>
+                                    <td>{{ $question->title }}</td>
+                                    <td>{{ $question->description }}</td>
                                     <td>
-                                        <a class="btn btn-block btn-warning btn-sm"  href="{{route('admin.questions.more', $subscriber->id )}}">Edit</a>
+                                        <a class="btn btn-block btn-success btn-sm"  href="{{route('admin.questions.more', $question->id )}}">More</a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-block btn-warning btn-sm"  href="{{route('admin.subscribers.edit', $subscriber->id )}}">Edit</a>
+                                        <a class="btn btn-block btn-warning btn-sm"  href="{{route('admin.questions.edit', $question->id )}}">Edit</a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-block btn-danger delete-button btn-sm" data-id="{{$subscriber->id}}" data-token="{{csrf_token()}}" data-url="{{route('admin.subscribers.delete')}}">Delete</a>
+                                        <a class="btn btn-block btn-danger delete-button btn-sm" data-id="{{$question->id}}" data-token="{{csrf_token()}}" data-url="{{route('admin.questions.delete')}}">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach

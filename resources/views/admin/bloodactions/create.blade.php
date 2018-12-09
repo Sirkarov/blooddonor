@@ -28,7 +28,7 @@
                     </div>
                       <div class="form-group">
                               <label for="exampleInputNameCharacteristic1">Датум</label><br><br>
-                              <input type="date" required class="form-control" id="exampleInpuNameCharacteristic1" name="date">
+                              <input type="date"  data-date-format="dd-mm-yyyy" data-date-start-date="Date.default" required class="form-control" id="exampleInpuNameCharacteristic1" name="date">
                       </div>
                       <div class="form-group">
                               <label for="exampleInputNameCharacteristic1">Време</label><br><br>

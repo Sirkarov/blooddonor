@@ -19,7 +19,7 @@ class PostController extends Controller
     public function create()
     {
         $cities = City::all();
-        $bloodTypes = BloodType::all();
+        $bloodTypes = BloodType::where('id','>','1')->get();
         return view('admin.posts.create',compact('bloodTypes','cities'));
     }
     public function store(Request $request)

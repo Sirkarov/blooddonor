@@ -5,9 +5,11 @@ namespace App\Http\Controllers\Front;
 use App\Models\BloodType;
 use App\Models\GenderType;
 use App\Models\City;
+use App\Models\Term;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class IndexController extends Controller
 {
@@ -78,9 +80,24 @@ class IndexController extends Controller
     }
     public function term()
     {
-        //$user = User::findorFail($id);
+        $id = Auth::user()->id;
+        $user = User::findorFail($id);
+        $cities = City::all();
+        return view('front.term',compact('user','cities'));
+    }
 
-        return view('front.term',compact('user'));
+    public function storeTerm(Request $request)
+    {
+        $term = new Term;
+        $term ->user_id = Auth::user()->id;
+        $term ->city_id = $request->get('city');
+        $term -> date = $request->get('date');
+        $term -> time = $request->get('time');
+
+        $term->save();
+
+        return redirect('/term')->with('message', 'Успешно Закажавте Термин!');
+
     }
 
 }

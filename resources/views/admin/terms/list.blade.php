@@ -1,6 +1,6 @@
 @extends('admin.master')
 @section('content')
-    <h3 class="box-title">Менаџирање на Постови</h3>
+    <h3 class="box-title">Менаџирање на Термини</h3>
     <div class="box">
         <div class="box-header">
 
@@ -8,7 +8,7 @@
         <!-- /.box-header -->
         <div class="box-body">
             <div class="row">
-                <div class="col-lg-2"><a class="btn btn-success" href={{asset('/admin/posts/create')}}>Додади Нов Оглас</a></div>
+                <div class="col-lg-2"><a class="btn btn-success" href={{asset('/admin/terms/create')}}>Додади Нов Термин</a></div>
             </div>
             <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                 <div class="row">
@@ -17,26 +17,28 @@
                             <thead>
                             <tr role="row">
                                 <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 297px;">ID</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 361px;">Опис</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 323px;">Крвна Група</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 257px;">Град</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 361px;">Корисник</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 323px;">Град</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 257px;">Датум</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 257px;">Време</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;"></th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 191px;"></th>
                             </tr>
                             </thead>
                             <tbody id="Click">
-                            @foreach($posts as $post)
+                            @foreach($terms as $term)
                                 <tr role="row" class="odd">
-                                    <td class="sorting_1">{{$post->id}}</td>
-                                    <td>{{ $post->description }}</td>
-                                    <td>{{ $post->bloodType->type}}</td>
-                                    <td>{{ $post->city->name}}</td>
+                                    <td class="sorting_1">{{$term->id}}</td>
+                                    <td>{{ $term->user->name}} {{ $term->user->surname}}</td>
+                                    <td>{{ $term->city->name}}</td>
+                                    <td>{{ $term->date}}</td>
+                                    <td>{{ $term->time}}</td>
                                     <td>
-                                        <a class="btn btn-block btn-warning btn-sm"  href="{{route('admin.posts.edit', $post->id )}}">Edit</a>
+                                        <a class="btn btn-block btn-warning btn-sm"  href="{{route('admin.terms.edit', $term->id )}}">Edit</a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-block btn-danger delete-button btn-sm" data-id="{{$post->id}}"
-                                           data-token="{{csrf_token()}}" data-url="{{route('admin.posts.delete')}}">Delete
+                                        <a class="btn btn-block btn-danger delete-button btn-sm" data-id="{{$term->id}}"
+                                           data-token="{{csrf_token()}}" data-url="{{route('admin.terms.delete')}}">Delete
                                         </a>
                                     </td>
                                 </tr>
@@ -45,9 +47,10 @@
                             <tfoot>
                             <tr>
                                 <th rowspan="1" colspan="1">ID</th>
-                                <th rowspan="1" colspan="1">Опис</th>
-                                <th rowspan="1" colspan="1">Крвна Група</th>
+                                <th rowspan="1" colspan="1">Корисник</th>
                                 <th rowspan="1" colspan="1">Град</th>
+                                <th rowspan="1" colspan="1">Датум</th>
+                                <th rowspan="1" colspan="1">Време</th>
                                 <th rowspan="1" colspan="1"></th>
                                 <th rowspan="1" colspan="1"></th>
                             </tr>

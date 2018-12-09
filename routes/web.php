@@ -24,7 +24,7 @@ Route::get('/profile', 'Front\BloodDonorController@profile');
 
 Route::get('/term', 'Front\IndexController@term')->name('term')->middleware('auth');
 
-//Route::get('term/{id}', 'Front\IndexController@term')->name('term')->middleware('auth');
+Route::post('store', 'Front\IndexController@storeTerm')->name('storeTerm');
 
 Route::get('/learn', 'Front\IndexController@learn');
 
