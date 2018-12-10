@@ -99,5 +99,10 @@ class IndexController extends Controller
         return redirect('/term')->with('message', 'Успешно Закажавте Термин!');
 
     }
+    public function newUsers()
+    {
+        $users = User::all();
+        return $users;
+    }
 
 }

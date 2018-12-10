@@ -10,7 +10,7 @@ class CityController extends Controller
 {
     public function list()
     {
-        $cities = City::all();
+        $cities = City::where('id','>','1')->get();
         return view('admin.cities.list',compact('cities'));
     }
     public function create()

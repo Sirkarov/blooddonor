@@ -40,7 +40,7 @@
                             @foreach($questions as $question)
                                 <tr role="row" class="odd">
                                     <td class="sorting_1">{{$question->id}}</td>
-                                    <td>{{ $question->isActive }}</td>
+                                    <td><input type="checkbox" value="{{$question->isActive}}" style="height: 20px;width: 70px;" class="custom-control-input" id="isActive"></td>
                                     <td>{{$question->user->name}}</td>
                                     <td>{{ $question->title }}</td>
                                     <td>{{ $question->description }}</td>

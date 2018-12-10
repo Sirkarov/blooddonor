@@ -14,9 +14,10 @@ class BloodDonorController extends Controller
         return view('front.blood_donors', compact('blood_donors'));
     }
 
-    public function profile()
+    public function profile($id)
     {
-        return view('front.blood_donor_profile');
+        $user = User::findorFail($id);
+        return view('front.blood_donor_profile',compact('user'));
     }
 
 }
