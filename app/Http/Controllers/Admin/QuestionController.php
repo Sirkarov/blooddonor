@@ -26,12 +26,22 @@ class QuestionController extends Controller
     public function store(Request $request)
     {
         $question = new Question;
-        $question->user_id = null;
+        $question->user_id =11;
         $question->title = $request->get('title');
         $question->description = "";
         $question->save();
 
         return redirect('admin/questions')->with(['success'=>'succesfully added']);
+    }
+    public function frontstore(Request $request)
+    {
+        $question = new Question;
+        $question->user_id =11;
+        $question->title = $request->get('title');
+        $question->description = "";
+        $question->save();
+
+        return redirect('/questions')->with(['message'=>'Вашето прашање ќе биде процесирано!']);
     }
     public function delete(Request $request)
     {

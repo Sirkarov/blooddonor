@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Front;
 use App\Models\BloodType;
 use App\Models\GenderType;
 use App\Models\City;
+use App\Models\Post;
+use App\Models\Question;
 use App\Models\Term;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -31,7 +33,8 @@ class IndexController extends Controller
     }
     public function questions()
     {
-        return view('front.questions');
+        $questions = Question::all();
+        return view('front.questions',compact('questions'));
     }
     public function get_user_profile($id)
     {
@@ -103,6 +106,12 @@ class IndexController extends Controller
     {
         $users = User::where('isAdmin','=','0')->get();
         return $users;
+    }
+
+    public function getPosts()
+    {
+        $posts = Post::with('city','bloodType')->get();
+        return $posts;
     }
 
 }

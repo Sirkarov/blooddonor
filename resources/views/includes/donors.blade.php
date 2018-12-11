@@ -41,7 +41,7 @@
                     users[i] = {name:response.data[i].name,surname:response.data[i].surname,image:response.data[i].image,
                     blood_type:response.data[i].blood_type_id};
                 }
-                console.log(users);
+                //console.log(users);
                 this.users = users;
             })
                 .catch(e => {
