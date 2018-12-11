@@ -80,7 +80,7 @@ class UserController extends Controller
 
         $phone = rand(111111,999999);
         $user->phone = "075".$phone;
-        $user->image = "default";
+        $user->image = public_path('default_avatar.png');
         $user->password = "default";
         $user->birth = Carbon::now();
 

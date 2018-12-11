@@ -5,21 +5,48 @@
             Ова се крводарителите кои денес даруваа за првпат крв и запливаа во водите на крводарителството и хуманоста.
         </h5>
         <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <!-- begin team -->
+            <div class="col-md-6"  v-for="user in users">
                 <div class="team">
-                    <div class="image" data-animation="true" data-animation-type="flipInX">
-                        <img src="../assets/img/user/user-1.jpg" alt="Ryan Teller" />
+                    <div class="image flipInX contentAnimated finishAnimated" data-animation="true" data-animation-type="flipInX">
+                        <img v-bind:src="'/uploads/' + user.image">
                     </div>
                     <div class="info">
-                        <h3 class="name">Ryan Teller</h3>
-                        <div class="title text-theme">Архитект</div>
-                        <p>Мотивацијата и мислата да станам крводарител ја имав како мал и затоа сега кога наполнив 18 години конечно
-                            го направив тоа.</p>
+                        <h3 class="name">@{{ user.name }} @{{ user.surname }}</h3>
+                        <div class="title text-theme"><h6 style="color:black">Крвна Група :  А+</h6></div>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                        <div class="social">
+                            <a href="#" style="background-color: red"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                            <a href="#" style="background-color: red"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                            <a href="#" style="background-color: red"><i class="fab fa-google-plus-g fa-lg fa-fw"></i></a>
+                        </div>
                     </div>
                 </div>
-                <!-- end team -->
             </div>
         </div>
     </div>
 </div>
+<script src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    new Vue({
+        el:'#new_donors',
+        data:{
+          users:[],
+        },
+        mounted(){
+            axios.get('getNewUsers').then(response=>{
+                let users = [];
+                for(let i=0;i<response.data.length;i++)
+                {
+                    users[i] = {name:response.data[i].name,surname:response.data[i].surname,image:response.data[i].image,
+                    blood_type:response.data[i].blood_type_id};
+                }
+                console.log(users);
+                this.users = users;
+            })
+                .catch(e => {
+                    console.log(e);
+                });
+        }
+    })
+</script>

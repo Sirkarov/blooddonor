@@ -1,4 +1,6 @@
 <?php
 
 
-Route::get('/', 'Front\IndexController@newUsers')->name('getNewUsers');
+Route::get('getNewUsers', 'Front\IndexController@getNewUsers',function (){
+    return view('includes.donors');
+})->name('getNewUsers');

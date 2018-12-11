@@ -99,10 +99,11 @@ class IndexController extends Controller
         return redirect('/term')->with('message', 'Успешно Закажавте Термин!');
 
     }
-    public function newUsers()
+    public function getNewUsers()
     {
-        $users = User::all();
+        $users = User::where('isAdmin','=','0')->get();
         return $users;
     }
 
 }
+
