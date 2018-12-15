@@ -24,7 +24,7 @@
     </div>
     <div class="row" style="margin-top: 10px">
         @foreach($questions as $question)
-        <div class="col-lg-12">
+        <div class="col-lg-12" style="padding-bottom:10px">
             <div class="card">
                 <h5 class="card-header h5" style="background-color: #ff0000;color:white;">{{$question->title}}</h5>
                 <div class="card-body">

@@ -10,12 +10,12 @@
                 <div class="col-lg-2">
                     <a class="btn btn-success" href={{asset('/admin/bloodactions/create')}}>Нова Крводарителска Акција</a>
                 </div>
-                <div class="col-lg-2">
+              {{--  <div class="col-lg-2">
                     <form role="form" method="POST" action="{{route('admin.bloodactions.testStore')}}">
                         {{ csrf_field() }}
                         <button type="submit" required class="btn btn-warning">ДОДАДИ ТЕСТ АКЦИЈА</button>
                     </form>
-                </div>
+                </div>--}}
             </div>
         <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
             <div class="row">

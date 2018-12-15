@@ -102,7 +102,7 @@ class UserController extends Controller
 
     public function update(Request $request,$id)
     {
-        dd($request);
+       // dd($request);
         $user = User::findorFail($id);
 
         $user->name = $request->get('name');
@@ -120,7 +120,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('profile/{{$id}}')->back()->with(['success'=>'succesfully added']);
+        return redirect('admin/users')->with(['success'=>'succesfully added']);
     }
 
     public function delete(Request $request)

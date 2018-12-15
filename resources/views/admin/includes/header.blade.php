@@ -4,7 +4,8 @@
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>A</b>LT</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg">
+        <span class="logo-lg" style="font-size: 15px;">
+            <i class="fa fa-plus" aria-hidden="true"></i> Сервис за крводарители
         </span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
@@ -15,3 +16,4 @@
         </a>
     </nav>
 </header>
+

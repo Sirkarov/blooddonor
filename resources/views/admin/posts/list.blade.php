@@ -1,6 +1,6 @@
 @extends('admin.master')
 @section('content')
-    <h3 class="box-title">Менаџирање на Постови</h3>
+    <h3 class="box-title">Менаџирање на Огласи</h3>
     <div class="box">
         <div class="box-header">
 

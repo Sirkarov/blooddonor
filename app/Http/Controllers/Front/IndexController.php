@@ -104,7 +104,7 @@ class IndexController extends Controller
     }
     public function getNewUsers()
     {
-        $users = User::where('isAdmin','=','0')->get();
+        $users = User::where('isAdmin','=','0')->with('city')->get();
         return $users;
     }
 

@@ -54,34 +54,34 @@
             </span>
                 </a>
                 <ul class="treeview-menu" style="">
-                    <li><a href={{asset('admin/bloodactions')}}><i class="fa fa-user"></i> <span>Листа на Крв. Акциии</span></a></li>
-                    <li><a href={{asset('admin/bloodactions/create')}}><i class="fa fa-user"></i> <span>Креирај Крв. Акција</span></a></li>
+                    <li><a href={{asset('admin/bloodactions')}}><i class="fa fa-puzzle-piece"></i>  <span>Листа на Крв. Акциии</span></a></li>
+                    <li><a href={{asset('admin/bloodactions/create')}}><i class="fa fa-puzzle-piece"></i>  <span>Креирај Крв. Акција</span></a></li>
                 </ul>
             </li>
             <li class="active">
                 <a href="{{asset('admin/cities')}}">
-                    <i class="fa  fa-location-arrow"></i> <span>Градови</span>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> <span>Градови</span>
                     <span class="pull-right-container">
             </span>
                 </a>
             </li>
             <li class="active">
                 <a href="{{asset('admin/subscribers')}}">
-                    <i class="fa  fa-location-arrow"></i> <span>Претплатници</span>
+                    <i class="fa fa-users" aria-hidden="true"></i> <span>Претплатници</span>
                     <span class="pull-right-container">
             </span>
                 </a>
             </li>
             <li class="active">
                 <a href="{{asset('admin/posts')}}">
-                    <i class="fa  fa-location-arrow"></i> <span>Огласи</span>
+                    <i class="fa fa-list" aria-hidden="true"></i> <span>Огласи</span>
                     <span class="pull-right-container">
             </span>
                 </a>
             </li>
             <li class="active">
                 <a href="{{asset('admin/questions')}}">
-                    <i class="fa  fa-location-arrow"></i> <span>Прашања</span>
+                    <i class="fa fa-question-circle"></i> <span>Прашања</span>
                     <span class="pull-right-container">
             </span>
                 </a>

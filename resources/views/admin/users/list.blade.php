@@ -9,10 +9,10 @@
             <div class="row">
                 <div class="col-lg-2"><a class="btn btn-success" href={{asset('/admin/users/create')}}>Додади Нов Корисник</a></div>
                 <div class="col-lg-2">
-                    <form role="form" method="POST" action="{{route('admin.users.testStore')}}">
+                   {{-- <form role="form" method="POST" action="{{route('admin.users.testStore')}}">
                         {{ csrf_field() }}
                         <button type="submit" required class="btn btn-warning" style="margin-left:30px">ДОДАДИ ТЕСТ КОРИСНИК</button>
-                    </form>
+                    </form>--}}
                 </div>
             </div>
             <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">

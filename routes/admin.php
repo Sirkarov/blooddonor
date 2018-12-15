@@ -81,7 +81,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
         Route::get('more/{id}', 'Admin\QuestionController@more')->name('more');
         Route::post('update/{id}', 'Admin\QuestionController@update')->name('update');
         Route::post('testStore', 'Admin\QuestionController@testStore')->name('testStore');
-        Route::post('frontStore', 'Admin\QuestionController@frontstore')->name('frontstore');
+        Route::post('frontStore', 'Admin\QuestionController@frontstore')->name('frontstore')->middleware('auth');;
 
     });
 

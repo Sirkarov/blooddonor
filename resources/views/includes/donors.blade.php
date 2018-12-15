@@ -11,9 +11,9 @@
                         <img v-bind:src="'/uploads/' + user.image">
                     </div>
                     <div class="info">
-                        <h3 class="name">@{{ user.name }} @{{ user.surname }}</h3>
+                        <h3 class="name" style="color:red">@{{ user.name }} @{{ user.surname }}</h3>
                         <div class="title text-theme"><h6 style="color:black">Крвна Група :  А+</h6></div>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                        <p>@{{ user.years }} Години , @{{ user.city.name }}</p>
                         <div class="social">
                             <a href="#" style="background-color: red"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
                             <a href="#" style="background-color: red"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
@@ -39,7 +39,7 @@
                 for(let i=0;i<response.data.length;i++)
                 {
                     users[i] = {name:response.data[i].name,surname:response.data[i].surname,image:response.data[i].image,
-                    blood_type:response.data[i].blood_type_id};
+                    blood_type:response.data[i].blood_type_id,years:response.data[i].years,city:response.data[i].city};
                 }
                 //console.log(users);
                 this.users = users;

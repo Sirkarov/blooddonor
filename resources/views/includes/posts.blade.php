@@ -6,7 +6,7 @@
         </h5>
         <div class="row">
             <div class="col-md-6" v-for="post in posts">
-                <div class="card" style=" background-color: #f2f2f2">
+                <div class="card" style=" background-color: white">
                     <h5 class="card-header h5 text-center" style="background-color: #ff0000;color:white">Потребна е крвна група <strong>@{{ post.blood_type }}</strong> </h5>
                     <div class="card-body">
                         <div class="row text-center">

@@ -11,7 +11,7 @@
                     <thead>
                     <tr>
                         <th style="width: 10px">ID</th>
-                        <th style="width: 10px">Карактеристика</th>
+                        <th style="width: 10px">Град</th>
                         <th style="width: 15px">Откажи</th>
                         <th style="width: 10px">Зачувај</th>
                     </tr>

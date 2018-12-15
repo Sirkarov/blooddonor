@@ -1,13 +1,13 @@
 @extends('admin.master')
 @section('content')
+    <h3 class="box-title">Менаџирање на Градови</h3>
     <div class="box">
         <div class="box-header with-border">
-            <h3 class="box-title">Cities</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
             <div class="col-lg-6">
-                <div class="col-sm-1"><a class="btn btn-success " href={{asset('/admin/cities/create')}}>Add New City</a></div><br><br>
+                <div class="col-sm-1"><a class="btn btn-success " href={{asset('/admin/cities/create')}}>Додани Град</a></div><br><br>
                 <table class="table table-bordered">
                     <thead>
                     <tr>
