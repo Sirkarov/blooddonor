@@ -11,7 +11,7 @@
             @endif
         </div>
         <div class="col-lg-7">
-            <form role="form" method="POST" action="{{route('admin.questions.frontstore')}}">
+            <form role="form" method="POST" action="{{route('admin.questions.frontstore',Auth::user()->id )}}">
                 {{ csrf_field() }}
                 <div class="form-group sub">
                     <div class="input-group">

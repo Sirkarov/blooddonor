@@ -23,10 +23,9 @@ class QuestionController extends Controller
         $bloodTypes = BloodType::all();
         return view('admin.posts.create',compact('bloodTypes','cities'));
     }
-    public function store(Request $request)
+    public function store(Request $request,$user_id)
     {
         $question = new Question;
-        $question->user_id =11;
         $question->title = $request->get('title');
         $question->description = "";
         $question->save();
@@ -36,7 +35,7 @@ class QuestionController extends Controller
     public function frontstore(Request $request)
     {
         $question = new Question;
-        $question->user_id =11;
+        $question->user_id =Auth::user()->id;
         $question->title = $request->get('title');
         $question->description = "";
         $question->save();
@@ -45,8 +44,7 @@ class QuestionController extends Controller
     }
     public function delete(Request $request)
     {
-        $post =Post::find($request->get("id"));
-
+        $post =Question::find($request->get("id"));
         $post->delete();
 
         return response()->json(['status' => 'success']);

@@ -86,6 +86,13 @@
             </span>
                 </a>
             </li>
+            {{--<li class="active">
+                <a href="{{asset('admin/contacts')}}">
+                    <i class="fa fa-check"></i> <span>Предлози</span>
+                    <span class="pull-right-container">
+            </span>
+                </a>
+            </li>--}}
             <li class="active">
                 <a href="{{asset('admin/terms')}}">
                     <i class="fa  fa-location-arrow"></i> <span>Термини</span>

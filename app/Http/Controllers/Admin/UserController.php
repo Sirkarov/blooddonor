@@ -102,7 +102,7 @@ class UserController extends Controller
 
     public function update(Request $request,$id)
     {
-       // dd($request);
+
         $user = User::findorFail($id);
 
         $user->name = $request->get('name');
@@ -115,8 +115,7 @@ class UserController extends Controller
         $user->city_id = $request->get('city');
         $user->phone = $request->get('phone');
         $user->donations = $request->get('donations');
-        $user->image = "default";
-        $user->password = "default";
+        $user->image = $request->get('image');
 
         $user->save();
 

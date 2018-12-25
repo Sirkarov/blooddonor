@@ -99,5 +99,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
 
     });
 
+    #Terms routes
+    Route::group(['prefix' => 'contacts', 'as' => 'contacts.'], function () {
+        Route::get('/', 'Front\ContactController@list')->name('list');
+        Route::post('store', 'Front\ContactController@store')->name('store');
+
+    });
+
 });
 

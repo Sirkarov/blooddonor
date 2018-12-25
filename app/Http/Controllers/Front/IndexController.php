@@ -33,7 +33,7 @@ class IndexController extends Controller
     }
     public function questions()
     {
-        $questions = Question::all();
+        $questions = Question::where('description','!=','')->get();
         return view('front.questions',compact('questions'));
     }
     public function get_user_profile($id)
@@ -104,7 +104,8 @@ class IndexController extends Controller
     }
     public function getNewUsers()
     {
-        $users = User::where('isAdmin','=','0')->with('city')->get();
+        $users = User::orderBy('id','Desc')->where('isAdmin','=','0')->with('city')->take(2)->get();
+        //$users = User::where('isAdmin','=','0')->with('city')->get();
         return $users;
     }
 
