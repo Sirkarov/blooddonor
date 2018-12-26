@@ -1,4 +1,4 @@
-<div id="footer" class="footer" style="height: 345px;">
+<div id="footer" class="footer" style="height: 345px;" data-scrollview="true">
     <div class="container">
        <div class="row">
            <div class="logo-footer col-lg-3 col-md-3 col-sm-3">
@@ -13,7 +13,7 @@
                <a href="/"><h5>Дома</h5></a>
                <a href="/blood_donors"><h5>Крводарители</h5></a>
                <a href="/blood_actions"><h5>Крводарителски Акции</h5></a>
-               <a href="/posts"><h5>Огласи</h5></a>
+             {{--  <a data-target="posts"><h5>Огласи</h5></a>--}}
            </div>
            <div class="donate-footer col-lg-3 col-md-3 col-sm-3">
                <h3>Контакт</h3>
@@ -51,5 +51,4 @@
         </div>
     </div>
 </div>
-
 
